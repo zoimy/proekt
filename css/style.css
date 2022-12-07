@@ -239,3 +239,44 @@ a {
 }
 
 /* -------------------------------- /Products -------------------------------- */
+.search {
+  background: #a3d0c3;
+}
+.search form {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+}
+.search input {
+  width: 100%;
+  height: 42px;
+  padding-left: 10px;
+  border: 2px solid var(--accent-color);
+  border-radius: 5px;
+  outline: none;
+  background: #fff;
+  color: #000;
+}
+.search input ::-moz-placeholder {
+  color: #9e9c9c;
+}
+.search input :-ms-input-placeholder {
+  color: #9e9c9c;
+}
+.search input ::placeholder {
+  color: #9e9c9c;
+}
+.search button {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 42px;
+  height: 42px;
+  border: none;
+  background: var(--accent-color);
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+.search button span {
+  color: #fff;
+}
