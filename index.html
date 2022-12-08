@@ -10,81 +10,51 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </head>
   <body>
     <header class="header">
       <div class="header__container">
-        <a href="#" class="header__logo"> 
-          <img src="https://bigshop.md/storage/Qayqdml7ZmGgOn57BQqS6sOh6E1J73j2e6kXI7hX.png" alt="logo">
-        </a>
+        <a href="#" class="header__logo">Logo</a>
+        <div class="header__search">
+          <form>
+            <input type="text" placeholder="Искать" />
+            <button type="submit">
+              <span class="material-symbols-outlined">search</span>
+            </button>
+          </form>
+        </div>
         <nav class="header__nav">
           <ul class="list__body">
-            <li class="list__item nav-item-dropdown">
-              <a class="dropdown-trigger list__link" href="#">Товары</a>
-              <ul class="dropdown-menu">
-                <li class="dropdown-menu-item">
-                  <a href="#">
-                    <span class="material-symbols-outlined"> close </span>
-                    <span>Item 1</span> 
-                  </a>
-                </li>
-                <li class="dropdown-menu-item">
-                  <a href="#">
-                    <span class="material-symbols-outlined"> close </span>
-                    <span>Item 2</span> 
-                  </a>
-                </li>
-                <li class="dropdown-menu-item">
-                  <a href="#">
-                    <span class="material-symbols-outlined"> close </span>
-                    <span>Item 3</span> 
-                  </a>
-                </li>
-                <li class="dropdown-menu-item">
-                  <a href="#">
-                    <span class="material-symbols-outlined"> close </span>
-                    <span>Item 4</span> 
-                  </a>
-                </li>
-                <li class="dropdown-menu-item">
-                  <a href="#">
-                    <span class="material-symbols-outlined"> close </span>
-                    <span>Item 5</span> 
-                  </a>
-                </li>
-              </ul>
+            <li class="list__item">
+              <a href="#" class="list__link">Коллекции</a>
+            </li>
+            <li class="list__item">
+              <a href="#" class="list__link">Мебель</a>
+            </li>
+            <li class="list__item">
+              <a href="#" class="list__link">Освещение</a>
+            </li>
+            <li class="list__item">
+              <a href="#" class="list__link">Аксессуары</a>
             </li>
             <li class="list__item">
               <a href="#" class="list__link">Доставка</a>
             </li>
-            <li class="list__item">
-              <a href="#" class="list__link">Оплата</a>
-            </li>
-            <li class="list__item">
-              <a href="#" class="list__link">Бронь стола</a>
-            </li>
           </ul>
         </nav>
-
-        <!-- <a href="tel:+1 (234) 567-89-10" class="header__phone">
-          <span class="material-symbols-outlined icon"> call </span>
-          <span>+1 (234) 567-89-10</span>
-        </a> -->
-
-
-        <div class="search">
-          <form>
-          <input type="text" placeholder="Искать здесь...">
-          <button type="submit">
-            <span class="material-symbols-outlined">search</span>
-          </button>
-          </form>
-        </div>
-
-
         <div class="header__actions">
+          <a href="#" class="header__location">Москва</a>
           <button class="header__user">
             <span class="material-symbols-outlined"> person </span>
+          </button>
+          <button class="header__favorite">
+            <span class="material-symbols-outlined"> favorite </span>
           </button>
           <button class="header__cart">
             <span class="material-symbols-outlined"> shopping_cart </span>
@@ -93,193 +63,170 @@
       </div>
     </header>
     <main>
+      <section class="banner">
+        <div class="banner__full-container">
+          <div class="banner__image">
+            <img src="img/banner.png" alt="banner-image" />
+          </div>
+          <div class="banner__info">
+            <div class="banner__title">Новая коллекция</div>
+            <div class="banner__description">
+              Наши новые поставки мебели в скандинавском стиле приятно вас
+              удивят
+            </div>
+            <button class="banner__button">Смотреть</button>
+          </div>
+        </div>
+      </section>
+      <section class="slider">
+        <div class="slider__container">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide">
+                <a class="slide__image">
+                  <img src="img/slider/table.svg" alt="slider-table" />
+                </a>
+                <div class="slide__title">Столы</div>
+              </div>
+              <div class="swiper-slide slide">
+                <a class="slide__image">
+                  <img src="img/slider/divan.svg" alt="slider-divan" />
+                </a>
+                <div class="slide__title">Диваны</div>
+              </div>
+              <div class="swiper-slide slide">
+                <a class="slide__image">
+                  <img src="img/slider/bed.svg" alt="slider-table" />
+                </a>
+                <div class="slide__title">Кровати</div>
+              </div>
+              <div class="swiper-slide slide">
+                <a class="slide__image">
+                  <img src="img/slider/lamp.svg" alt="slider-table" />
+                </a>
+                <div class="slide__title">Освещение</div>
+              </div>
+              <div class="swiper-slide slide">
+                <a class="slide__image">
+                  <img src="img/slider/carpet.svg" alt="slider-table" />
+                </a>
+                <div class="slide__title">Текстиль</div>
+              </div>
+              <div class="swiper-slide slide">
+                <a class="slide__image">
+                  <img src="img/slider/plant.svg" alt="slider-table" />
+                </a>
+                <div class="slide__title">Декорации</div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
       <section class="products">
         <div class="products__container">
-          <div class="products__title">Все продукты</div>
+          <div class="products__title">Хиты продаж</div>
           <div class="products__wrapper">
             <div class="product">
-              <a href="#" class="product__image">
-                  <img src="" alt="">
-              </a>
-
-              <div class="product__title">Голень Говядины</div>
-              <div class="product__desc">
-                Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.
+              <div class="product__image">
+                <img src="img/products/1.png" alt="product-image" />
               </div>
-              <div class="product__rate">
-                <span class="active"></span>
-                <span class="active"></span>
-                <span class="active"></span>
-                <span class="active"></span>
-                <span></span>
+              <div class="product__title">Кресло Барселона</div>
+              <div class="product__price">$6738</div>
+              <div class="product__actions">
+                <button class="product__cart">В корзину</button>
+                <button class="product__favorite">
+                  <span class="material-symbols-outlined"> favorite </span>
+                </button>
               </div>
-              <div class="product__price">
-                <span>100р/кг</span> 
-                <span>За 500g</span>
-              </div>  
-              <button class="product__button">В корзину</button>
             </div>
             <div class="product">
-              <a href="#" class="product__image">
-                  <img src="" alt="">
-              </a>
-
-              <div class="product__title">Голень Говядины</div>
-              <div class="product__desc">
-                Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.
+              <div class="product__image">
+                <img src="img/products/2.png" alt="product-image" />
               </div>
-              <div class="product__rate">
-                <span class="active"></span>
-                <span class="active"></span>
-                <span class="active"></span>
-                <span class="active"></span>
-                <span></span>
+              <div class="product__title">Кресло Барселона</div>
+              <div class="product__price">$6738</div>
+              <div class="product__actions">
+                <button class="product__cart">В корзину</button>
+                <button class="product__favorite">
+                  <span class="material-symbols-outlined"> favorite </span>
+                </button>
               </div>
-              <div class="product__price">
-                <span>100р/кг</span> 
-                <span>За 500g</span>
-              </div>  
-              <button class="product__button">В корзину</button>
             </div>
             <div class="product">
-              <a href="#" class="product__image">
-                  <img src="" alt="">
-              </a>
-
-              <div class="product__title">Голень Говядины</div>
-              <div class="product__desc">
-                Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.
+              <div class="product__image">
+                <img src="img/products/3.png" alt="product-image" />
               </div>
-              <div class="product__rate">
-                <span class="active"></span>
-                <span class="active"></span>
-                <span class="active"></span>
-                <span class="active"></span>
-                <span></span>
+              <div class="product__title">Кресло Барселона</div>
+              <div class="product__price">$6738</div>
+              <div class="product__actions">
+                <button class="product__cart">В корзину</button>
+                <button class="product__favorite">
+                  <span class="material-symbols-outlined"> favorite </span>
+                </button>
               </div>
-              <div class="product__price">
-                <span>100р/кг</span> 
-                <span>За 500g</span>
-              </div>  
-              <button class="product__button">В корзину</button>
             </div>
             <div class="product">
-              <a href="#" class="product__image">
-                  <img src="" alt="">
-              </a>
-
-              <div class="product__title">Голень Говядины</div>
-              <div class="product__desc">
-                Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.
+              <div class="product__image">
+                <img src="img/products/4.png" alt="product-image" />
               </div>
-              <div class="product__rate">
-                <span class="active"></span>
-                <span class="active"></span>
-                <span class="active"></span>
-                <span class="active"></span>
-                <span></span>
+              <div class="product__title">Кресло Барселона</div>
+              <div class="product__price">$6738</div>
+              <div class="product__actions">
+                <button class="product__cart">В корзину</button>
+                <button class="product__favorite">
+                  <span class="material-symbols-outlined"> favorite </span>
+                </button>
               </div>
-              <div class="product__price">
-                <span>100р/кг</span> 
-                <span>За 500g</span>
-              </div>  
-              <button class="product__button">В корзину</button>
             </div>
             <div class="product">
-              <a href="#" class="product__image">
-                  <img src="" alt="">
-              </a>
-
-              <div class="product__title">Голень Говядины</div>
-              <div class="product__desc">
-                Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.
+              <div class="product__image">
+                <img src="img/products/5.png" alt="product-image" />
               </div>
-              <div class="product__rate">
-                <span class="active"></span>
-                <span class="active"></span>
-                <span class="active"></span>
-                <span class="active"></span>
-                <span></span>
+              <div class="product__title">Кресло Барселона</div>
+              <div class="product__price">$6738</div>
+              <div class="product__actions">
+                <button class="product__cart">В корзину</button>
+                <button class="product__favorite">
+                  <span class="material-symbols-outlined"> favorite </span>
+                </button>
               </div>
-              <div class="product__price">
-                <span>100р/кг</span> 
-                <span>За 500g</span>
-              </div>  
-              <button class="product__button">В корзину</button>
             </div>
             <div class="product">
-              <a href="#" class="product__image">
-                  <img src="" alt="">
-              </a>
-
-              <div class="product__title">Голень Говядины</div>
-              <div class="product__desc">
-                Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.
+              <div class="product__image">
+                <img src="img/products/6.png" alt="product-image" />
               </div>
-              <div class="product__rate">
-                <span class="active"></span>
-                <span class="active"></span>
-                <span class="active"></span>
-                <span class="active"></span>
-                <span></span>
+              <div class="product__title">Кресло Барселона</div>
+              <div class="product__price">$6738</div>
+              <div class="product__actions">
+                <button class="product__cart">В корзину</button>
+                <button class="product__favorite">
+                  <span class="material-symbols-outlined"> favorite </span>
+                </button>
               </div>
-              <div class="product__price">
-                <span>100р/кг</span> 
-                <span>За 500g</span>
-              </div>  
-              <button class="product__button">В корзину</button>
             </div>
-            <div class="product">
-              <a href="#" class="product__image">
-                  <img src="" alt="">
-              </a>
-
-              <div class="product__title">Голень Говядины</div>
-              <div class="product__desc">
-                Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.
-              </div>
-              <div class="product__rate">
-                <span class="active"></span>
-                <span class="active"></span>
-                <span class="active"></span>
-                <span class="active"></span>
-                <span></span>
-              </div>
-              <div class="product__price">
-                <span>100р/кг</span> 
-                <span>За 500g</span>
-              </div>  
-              <button class="product__button">В корзину</button>
-            </div>
-            <div class="product">
-              <a href="#" class="product__image">
-                  <img src="" alt="">
-              </a>
-
-              <div class="product__title">Голень Говядины</div>
-              <div class="product__desc">
-                Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.
-              </div>
-              <div class="product__rate">
-                <span class="active"></span>
-                <span class="active"></span>
-                <span class="active"></span>
-                <span class="active"></span>
-                <span></span>
-              </div>
-              <div class="product__price">
-                <span>100р/кг</span> 
-                <span>За 500g</span>
-              </div>  
-              <button class="product__button">В корзину</button>
-            </div>
+          </div>
         </div>
-      </section>   
+      </section>
+      <section class="subscription">
+        <div class="subscription__container">
+          <div class="subscription__info">
+            Подпишитесь на нашу новостную рассылку и получите скидку 10% на
+            первую покупку!
+          </div>
+          <div class="subscription__form">
+            <form>
+              <input type="text" placeholder="Введите ваш e-mail">
+              <button type="submit">Подписаться</button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
-
-    <footer class="footer"></footer>
-
-
+    <footer class="footer">
+      footer
+    </footer>
     <script src="js/script.js"></script>
   </body>
 </html>
