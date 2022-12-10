@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
 :root {
-  --orange: #db9969;
+  --accent-color: #db9969;
 }
 
 * {
@@ -20,6 +20,7 @@ ul {
 button {
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 a {
@@ -39,6 +40,10 @@ body {
 /* --------------------------------- Header --------------------------------- */
 .header {
   background-color: #eeeeee;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 .header__container {
   display: flex;
@@ -66,7 +71,7 @@ body {
   width: 100%;
   height: 42px;
   padding-left: 10px;
-  border: 2px solid var(--orange);
+  border: 2px solid var(--accent-color);
   border-radius: 5px;
   outline: none;
   background: #fff;
@@ -88,7 +93,7 @@ body {
   width: 42px;
   height: 42px;
   border: none;
-  background: var(--orange);
+  background: var(--accent-color);
   border-radius: 0 5px 5px 0;
   cursor: pointer;
 }
@@ -124,7 +129,7 @@ body {
   color: #000000;
   font-weight: 500;
   font-size: 18px;
-  background-image: linear-gradient(to right, var(--orange), var(--orange) 50%, #000 50%);
+  background-image: linear-gradient(to right, var(--accent-color), var(--accent-color) 50%, #000 50%);
   background-size: 200% 100%;
   background-position: -100%;
   display: inline-block;
@@ -136,7 +141,7 @@ body {
 }
 .header .list__link::before {
   content: "";
-  background: var(--orange);
+  background: var(--accent-color);
   display: block;
   position: absolute;
   bottom: -3px;
@@ -159,6 +164,8 @@ body {
 }
 .banner__full-container {
   display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .banner__image {
   width: 57%;
@@ -187,9 +194,10 @@ body {
   line-height: 20px;
   color: #000000;
   margin: 24px 0;
+  max-width: 330px;
 }
 .banner__button {
-  background: #db9969;
+  background: var(--accent-color);
   border-radius: 10px;
   padding: 12px 62px;
   font-family: "Arial";
@@ -252,7 +260,7 @@ body {
 }
 .slider .swiper-button-prev {
   height: 65px;
-  background-image: url("../img/slider/arrow-prev.svg");
+  background-image: url("../img/home/slider/arrow-prev.svg");
   background-repeat: no-repeat;
 }
 .slider .swiper-button-prev::after {
@@ -260,7 +268,7 @@ body {
 }
 .slider .swiper-button-next {
   height: 65px;
-  background-image: url("../img/slider/arrow-next.svg");
+  background-image: url("../img/home/slider/arrow-next.svg");
   background-repeat: no-repeat;
 }
 .slider .swiper-button-next::after {
@@ -312,7 +320,7 @@ body {
   gap: 55px;
 }
 .products .product__cart {
-  background: #db9969;
+  background: var(--accent-color);
   border-radius: 10px;
   padding: 6px 38px;
   font-family: "Arial";
@@ -325,7 +333,6 @@ body {
 .products .product__favorite {
   color: #666666;
 }
-
 /* -------------------------------- /Products -------------------------------- */
 /* ------------------------------- Subscription ------------------------------ */
 .subscription {
@@ -360,7 +367,7 @@ body {
   outline: none;
 }
 .subscription__form button {
-  background: #db9969;
+  background: var(--accent-color);
   border-radius: 10px;
   padding: 12px 62px;
   font-family: "Arial";
@@ -375,8 +382,46 @@ body {
 /* ------------------------------- /Subscription ------------------------------ */
 /* --------------------------------- Footer --------------------------------- */
 .footer {
-  background-color: #B3A094;
+  background-color: #b3a094;
   padding: 40px 0 70px;
+  color: #fff;
 }
-
+.footer__container {
+  display: flex;
+  gap: 400px;
+}
+.footer__links {
+  display: flex;
+  gap: 120px;
+}
+.footer .block__title {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.footer .block__item {
+  margin-bottom: 15px;
+}
+.footer .block__link {
+  font-family: "Arial";
+  font-weight: 400;
+  color: #ffffff;
+}
+.footer .social__title {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.footer .social__links {
+  display: flex;
+  justify-content: space-around;
+}
 /* --------------------------------- /Footer --------------------------------- */

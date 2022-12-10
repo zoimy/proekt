@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
 
 :root {
-  --orange: #db9969;
+  --accent-color: #db9969;
 }
 
 * {
@@ -21,6 +21,7 @@ ul {
 button {
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 a {
@@ -40,6 +41,10 @@ body {
 /* --------------------------------- Header --------------------------------- */
 .header {
   background-color: #eeeeee;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
   // .header__container
   &__container {
     display: flex;
@@ -69,7 +74,7 @@ body {
       width: 100%;
       height: 42px;
       padding-left: 10px;
-      border: 2px solid var(--orange);
+      border: 2px solid var(--accent-color);
       border-radius: 5px;
       outline: none;
       // background: #e9ecef;
@@ -88,7 +93,7 @@ body {
       width: 42px;
       height: 42px;
       border: none;
-      background: var(--orange);
+      background: var(--accent-color);
       border-radius: 0 5px 5px 0;
       cursor: pointer;
 
@@ -148,8 +153,8 @@ body {
       font-size: 18px;
       background-image: linear-gradient(
         to right,
-        var(--orange),
-        var(--orange) 50%,
+        var(--accent-color),
+        var(--accent-color) 50%,
         #000 50%
       );
       background-size: 200% 100%;
@@ -163,7 +168,7 @@ body {
 
       &::before {
         content: "";
-        background: var(--orange);
+        background: var(--accent-color);
         display: block;
         position: absolute;
         bottom: -3px;
@@ -191,7 +196,8 @@ body {
   // .banner__container
   &__full-container {
     display: flex;
-    // justify-content: space-between;
+    max-width: 1440px;
+    margin: 0 auto;
   }
   // .banner__image
   &__image {
@@ -229,10 +235,11 @@ body {
     line-height: 20px;
     color: #000000;
     margin: 24px 0;
+    max-width: 330px;
   }
   // .banner__button
   &__button {
-    background: #db9969;
+    background: var(--accent-color);
     border-radius: 10px;
     padding: 12px 62px;
     font-family: "Arial";
@@ -312,7 +319,7 @@ body {
 
   .swiper-button-prev {
     height: 65px;
-    background-image: url("../img/slider/arrow-prev.svg");
+    background-image: url("../img/home/slider/arrow-prev.svg");
     background-repeat: no-repeat;
 
     &::after {
@@ -321,7 +328,7 @@ body {
   }
   .swiper-button-next {
     height: 65px;
-    background-image: url("../img/slider/arrow-next.svg");
+    background-image: url("../img/home/slider/arrow-next.svg");
     background-repeat: no-repeat;
 
     &::after {
@@ -388,7 +395,7 @@ body {
     }
     // .product__cart
     &__cart {
-      background: #db9969;
+      background: var(--accent-color);
       border-radius: 10px;
       padding: 6px 38px;
       font-family: "Arial";
@@ -401,6 +408,9 @@ body {
     // .product__favorite
     &__favorite {
       color: #666666;
+    }
+
+    .active {
     }
   }
 }
@@ -447,7 +457,7 @@ body {
     }
 
     button {
-      background: #db9969;
+      background: var(--accent-color);
       border-radius: 10px;
       padding: 12px 62px;
       font-family: "Arial";
@@ -462,10 +472,71 @@ body {
 }
 /* ------------------------------- /Subscription ------------------------------ */
 
-
 /* --------------------------------- Footer --------------------------------- */
 .footer {
-  background-color: #B3A094;
+  background-color: #b3a094;
   padding: 40px 0 70px;
+  color: #fff;
+
+  //.footer__container
+  &__container {
+    display: flex;
+    gap: 400px;
+  }
+  // .footer__links
+  &__links {
+    display: flex;
+    gap: 120px;
+  }
+  // .footer__social
+  &__social {
+  }
+
+  .block {
+    // .block__title
+    &__title {
+      font-family: "Arial";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 23px;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+    // .block__list
+    &__list {
+    }
+    // .block__item
+    &__item {
+      margin-bottom: 15px;
+    }
+    // .block__link
+    &__link {
+      font-family: "Arial";
+      font-weight: 400;
+      // line-height: 23px;
+      color: #ffffff;
+    }
+  }
+  .social {
+    // .social__title
+    &__title {
+      font-family: "Arial";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 23px;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+    // .social__links
+    &__links {
+      display: flex;
+      justify-content: space-around;
+    }
+    // .social__link
+    &__link {
+    }
+  }
 }
 /* --------------------------------- /Footer --------------------------------- */

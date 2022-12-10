@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/product.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <a href="#" class="header__logo">Logo</a>
+        <div class="header__search">
+          <form>
+            <input type="text" placeholder="Искать" />
+            <button type="submit">
+              <span class="material-icons-outlined">search</span>
+            </button>
+          </form>
+        </div>
+        <nav class="header__nav">
+          <ul class="list__body">
+            <li class="list__item">
+              <a href="#" class="list__link">Коллекции</a>
+            </li>
+            <li class="list__item">
+              <a href="#" class="list__link">Мебель</a>
+            </li>
+            <li class="list__item">
+              <a href="#" class="list__link">Освещение</a>
+            </li>
+            <li class="list__item">
+              <a href="#" class="list__link">Аксессуары</a>
+            </li>
+            <li class="list__item">
+              <a href="#" class="list__link">Доставка</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__actions">
+          <a href="#" class="header__location">Москва</a>
+          <button class="header__user">
+            <span class="material-icons-outlined"> person </span>
+          </button>
+          <button class="header__favorite">
+            <span class="material-icons-outlined"> favorite </span>
+          </button>
+          <button class="header__cart">
+            <span class="material-icons-outlined"> shopping_cart </span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="product">
+        <div class="prodcut__container">
+          <div class="product__path">
+            <a href="home.html">Товары</a>/<a href="#">Мебель</a>/<a href="#"
+              >Кресла</a
+            >/<a href="#">Кресло Барселона</a>
+          </div>
+          <div class="product__wrapper">
+            <div class="product__slider swiper mySwiper2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+              </div>
+              <div class="swiper-button-next next">
+                <span class="material-icons-outlined"> arrow_forward_ios </span>
+              </div>
+              <div class="swiper-button-prev prev">
+                <span class="material-icons-outlined"> arrow_back_ios </span>
+              </div>
+            </div>
+            <div class="product__info">
+              <div class="product__title">Кресло Барселона</div>
+              <div class="product__subtitle">Ludwig Mies van der Rohe 1929</div>
+              <div class="product__description">
+                Кресло Barcelona, ​​один из самых узнаваемых предметов прошлого
+                века и икона современного движения, излучает простую
+                элегантность, олицетворяющую самый известный принцип Мис ван дер
+                Роэ: «меньше значит больше». <a href="#">Еще</a>
+              </div>
+              <div class="product__colors">
+                <div>Выберите цвет:</div>
+                <div class="colors-wrapper">
+                  <div class="color active"></div>
+                  <div class="color"></div>
+                  <div class="color"></div>
+                  <div class="color"></div>
+                </div>
+              </div>
+              <div class="product__price">
+                <span>$6738</span>
+                <div class="counter">
+                  <button class="minus" id="minus">
+                    <span class="material-icons-outlined"> remove </span>
+                  </button>
+                  <input type="number" value="1" / id="input" min="0">
+                  <button class="plus" id="plus">
+                    <span class="material-icons-outlined"> add </span>
+                  </button>
+                </div>
+              </div>
+              <div class="product__delivery">
+                Бесплатная доставка в <a href="#">Москву</a>
+              </div>
+              <div class="product__actions">
+                <button class="product__cart">Добавить в корзину</button>
+                <button class="product__favorite fav">
+                  <span class="material-icons-outlined"> favorite_border </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__links">
+          <div class="block">
+            <div class="block__title">О компании</div>
+            <ul class="block__list">
+              <li class="block__item">
+                <a href="#" class="block__link">Работа и карьера у нас</a>
+              </li>
+              <li class="block__item">
+                <a href="#" class="block__link">Свяжитесь с нами</a>
+              </li>
+              <li class="block__item">
+                <a href="#" class="block__link">Контакты</a>
+              </li>
+              <li class="block__item">
+                <a href="#" class="block__link">Адресса магазинов</a>
+              </li>
+              <li class="block__item">
+                <a href="#" class="block__link">Напишите нам</a>
+              </li>
+              <li class="block__item">
+                <a href="#" class="block__link">Сотруднечество с нами</a>
+              </li>
+            </ul>
+          </div>
+          <div class="block">
+            <div class="block__title">Наши услуги</div>
+            <ul class="block__list">
+              <li class="block__item">
+                <a href="#" class="block__link">Доставка и самовывоз</a>
+              </li>
+              <li class="block__item">
+                <a href="#" class="block__link">Оплата и кредит</a>
+              </li>
+              <li class="block__item">
+                <a href="#" class="block__link">Оплата частями</a>
+              </li>
+              <li class="block__item">
+                <a href="#" class="block__link">Покупайте со Сбером</a>
+              </li>
+              <li class="block__item">
+                <a href="#" class="block__link">Возврат и обмен</a>
+              </li>
+              <li class="block__item">
+                <a href="#" class="block__link">Видеоконсультации</a>
+              </li>
+              <li class="block__item">
+                <a href="#" class="block__link">Все услуги</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__social">
+          <div class="social__title">Мы в социальных сетях</div>
+          <div class="social__links">
+            <a href="#" class="social__link">
+              <img src="img/home/social/facebook.svg" alt="facebook-icon" />
+            </a>
+            <a href="#" class="social__link">
+              <img src="img/home/social/instagram.svg" alt="instagram-icon" />
+            </a>
+            <a href="#" class="social__link">
+              <img src="img/home/social/twitter.svg" alt="twitter-icon" />
+            </a>
+            <a href="#" class="social__link">
+              <img src="img/home/social/youtube.svg" alt="youtube-icon" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
