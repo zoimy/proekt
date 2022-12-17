@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/home.css" />
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
@@ -73,7 +73,7 @@
             <div class="banner__title">Новая коллекция</div>
             <p class="banner__description">
               Наши новые поставки мебели в скандинавском стиле приятно вас
-              удивят 
+              удивят
             </p>
             <button class="banner__button">Смотреть</button>
           </div>
@@ -297,6 +297,41 @@
         </div>
       </div>
     </footer>
+
+    <div id="popup" class="popup">
+      <div class="popup__body">
+        <div class="popup__content">
+          <button class="popup__close" id="popup-close">
+            <span class="material-icons-outlined"> close </span>
+          </button>
+          <div class="popup__icon">
+            <span class="material-icons-outlined"> person </span>
+          </div>
+          <div class="popup__title">Регистрация</div>
+          <form class="popup__form">
+            <div class="block">
+              <span class="material-icons-outlined input-icon"> call </span>
+              <input type="number" class="tel" placeholder="Телефон" />
+            </div>
+
+            <div class="block">
+              <span class="material-icons-outlined input-icon"> key </span>
+              <input type="password" class="password" placeholder="Пароль" />
+            </div>
+            <div class="block">
+              <span class="material-icons-outlined input-icon"> key </span>
+              <input
+                type="password"
+                class="password-access"
+                placeholder="Подтвердите пароль"
+              />
+            </div>
+          </form>
+          <button class="popup__button">Зарегистрироваться</button>
+        </div>
+      </div>
+    </div>
+
     <script src="js/script.js"></script>
   </body>
 </html>

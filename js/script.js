@@ -58,12 +58,32 @@ if (plusBtn) {
 const favBtns = document.querySelectorAll(".fav");
 favBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
-    if ( btn.children[0].innerText == "favorite_border") {
-      console.log('clicked');
+    if (btn.children[0].innerText == "favorite_border") {
+      console.log("clicked");
       btn.children[0].innerText = "favorite";
-    } else if( btn.children[0].innerText == "favorite") {
-      console.log('clicked');
+    } else if (btn.children[0].innerText == "favorite") {
+      console.log("clicked");
       btn.children[0].innerText = "favorite_border";
     }
   });
 });
+
+// popup
+const closePopupBtn = document.getElementById("popup-close");
+const openPopupBtn = document.querySelector(".header__user");
+const popup = document.querySelector(".popup");
+const body = document.body;
+
+if(openPopupBtn && popup) {
+  openPopupBtn.addEventListener('click', () => {
+    popup.classList.add('open');
+    body.classList.add('stop-scrolling');
+  })
+}
+
+if(closePopupBtn && popup) {
+  closePopupBtn.addEventListener('click', () => {
+    popup.classList.remove('open');
+    body.classList.remove('stop-scrolling');
+  })
+}

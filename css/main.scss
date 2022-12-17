@@ -52,12 +52,17 @@ input:focus {
   outline: none;
 }
 
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
 /* --------------------------------- Header --------------------------------- */
 .header {
   background-color: #eeeeee;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 10;
 
   &__container {
     display: flex;
