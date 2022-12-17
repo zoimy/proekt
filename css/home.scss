@@ -144,9 +144,6 @@
 
 .products {
   padding-bottom: 80px;
-  // .products__container
-  &__container {
-  }
   // .products__title
   &__title {
     font-family: "Open Sans";
@@ -181,11 +178,6 @@
       justify-content: center;
       align-items: center;
       margin-bottom: 32px;
-      img {
-      }
-    }
-    // .product__title
-    &__title {
     }
     // .product__price
     &__price {
@@ -212,9 +204,6 @@
     // .product__favorite
     &__favorite {
       color: #666666;
-    }
-
-    .active {
     }
   }
 }
