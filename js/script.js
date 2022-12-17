@@ -1,6 +1,7 @@
 var swiper = new Swiper(".mySwiper", {
   autoplay: true,
   grabCursor: true,
+  speed: 900,
   loop: true,
   slidesPerView: 6,
   navigation: {
