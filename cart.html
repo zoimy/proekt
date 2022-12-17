@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/cart.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <a href="home.html" class="header__logo">Logo</a>
+        <div class="header__search">
+          <form>
+            <input type="text" placeholder="Искать" />
+            <button type="submit">
+              <span class="material-icons-outlined">search</span>
+            </button>
+          </form>
+        </div>
+        <nav class="header__nav">
+          <ul class="list__body">
+            <li class="list__item">
+              <a href="#" class="list__link">Коллекции</a>
+            </li>
+            <li class="list__item">
+              <a href="#" class="list__link">Мебель</a>
+            </li>
+            <li class="list__item">
+              <a href="#" class="list__link">Освещение</a>
+            </li>
+            <li class="list__item">
+              <a href="#" class="list__link">Аксессуары</a>
+            </li>
+            <li class="list__item">
+              <a href="#" class="list__link">Доставка</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__actions">
+          <a href="#" class="header__location">Москва</a>
+          <button class="header__user">
+            <span class="material-icons-outlined"> person </span>
+          </button>
+          <button class="header__favorite">
+            <span class="material-icons-outlined"> favorite_border </span>
+          </button>
+          <button class="header__cart">
+            <span class="material-icons-outlined"> shopping_cart </span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="cart">
+        <div class="cart__container">
+          <div class="cart__title">Корзина</div>
+          <div class="cart__wrapper">
+            <div class="cart__products">
+              <div class="product">
+                <button class="product__button">
+                  <span class="material-icons-outlined"> close </span>
+                </button>
+                <div class="product__image">
+                  <img src="img/cart/1.png" alt="1" />
+                </div>
+                <div class="product__name">Кресло Барселона</div>
+                <div class="product__count">
+                  <button class="minus">
+                    <span class="material-icons-outlined"> remove </span>
+                  </button>
+                  <input type="number" value="1" / class="input" min="0">
+                  <button class="plus">
+                    <span class="material-icons-outlined"> add </span>
+                  </button>
+                </div>
+                <div class="product__price">$6738</div>
+              </div>
+              <div class="product">
+                <button class="product__button">
+                  <span class="material-icons-outlined"> close </span>
+                </button>
+                <div class="product__image">
+                  <img src="img/cart/1.png" alt="1" />
+                </div>
+                <div class="product__name">Кресло Барселона</div>
+                <div class="product__count">
+                  <button class="minus">
+                    <span class="material-icons-outlined"> remove </span>
+                  </button>
+                  <input type="number" value="1" / class="input" min="0">
+                  <button class="plus">
+                    <span class="material-icons-outlined"> add </span>
+                  </button>
+                </div>
+                <div class="product__price">$6738</div>
+              </div>
+            </div>
+            <div class="cart__order">
+              <div class="review">
+                <div class="review__title">Обзор заказа</div>
+                <div class="review__block">
+                  <span>Цена заказа:</span>
+                  <span>$6838</span>
+                </div>
+                <div class="review__block">
+                  <span>Промокод: </span>
+                  <span>-$100</span>
+                </div>
+                <div class="review__block">
+                  <span>Итого к оплате:</span>
+                  <span>$6738</span>
+                </div>
+                <a href="home.html" class="review__button">Оформить заказ</a>
+              </div>
+              <div class="promo">
+                <div class="promo__title">Промокод</div>
+                <div class="promo__main">
+                  <div class="promo__input">
+                    <input type="text">
+                  </div>
+                  <button class="promo__button">Потвердить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>

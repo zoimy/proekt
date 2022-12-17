@@ -36,9 +36,9 @@ colors.forEach((color) => {
 });
 
 //price counter
-const inputEl = document.getElementById("input");
-const minusBtn = document.getElementById("minus");
-const plusBtn = document.getElementById("plus");
+const inputEl = document.querySelector(".input");
+const minusBtn = document.querySelector(".minus");
+const plusBtn = document.querySelector(".plus");
 
 if (minusBtn) {
   minusBtn.addEventListener("click", () => {
