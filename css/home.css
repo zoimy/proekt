@@ -125,9 +125,10 @@
   margin-bottom: 20px;
 }
 .products__wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .products .product {
   font-family: "Open Sans";
@@ -186,6 +187,9 @@
   font-size: 24px;
   line-height: 28px;
 }
+.subscription__form {
+  width: 830px;
+}
 .subscription__form form {
   display: flex;
   align-items: center;
@@ -196,7 +200,7 @@
   border: 1px solid lightgray;
   border-radius: 10px;
   padding: 18px;
-  width: 530px;
+  width: 100%;
 }
 .subscription__form input:focus {
   outline: none;
@@ -212,4 +216,11 @@
   line-height: 23px;
   color: #ffffff;
   cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .subscription button {
+    padding: 12px 30px;
+    font-size: 17px;
+  }
 }

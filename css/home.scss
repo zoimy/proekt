@@ -156,9 +156,13 @@
   }
   // .products__wrapper
   &__wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
+    // display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    // gap: 28px;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .product {
@@ -227,6 +231,7 @@
   }
   // .subscription__form
   &__form {
+    width: 830px;
     form {
       display: flex;
       align-items: center;
@@ -239,7 +244,7 @@
       border: 1px solid lightgray;
       border-radius: 10px;
       padding: 18px;
-      width: 530px;
+      width: 100%;
 
       &:focus {
         outline: none;
@@ -262,3 +267,11 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .subscription {
+   button {
+    padding: 12px 30px;
+    font-size: 17px;
+   }
+  }
+}
