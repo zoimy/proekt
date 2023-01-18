@@ -1,3 +1,4 @@
+// СОЗДАЕМ СЛАЙДЕР
 var swiper = new Swiper(".mySwiper", {
   autoplay: true,
   grabCursor: true,
@@ -21,7 +22,7 @@ var swiper = new Swiper(".mySwiper2", {
   },
 });
 
-//colors
+// СМЕНА ЦВЕТА ПРОДУКТА
 const colors = document.querySelectorAll(".color");
 colors.forEach((color) => {
   color.addEventListener("click", (e) => {
@@ -36,7 +37,7 @@ colors.forEach((color) => {
   });
 });
 
-//price counter
+// ЦЕНА ТОВАРА
 const inputEl = document.querySelector(".input");
 const minusBtn = document.querySelector(".minus");
 const plusBtn = document.querySelector(".plus");
@@ -55,7 +56,7 @@ if (plusBtn) {
   });
 }
 
-// fav
+// ДОБАВЛЕНИЕ ТОВАРА В ИЗБРАННЫЕ
 const favBtns = document.querySelectorAll(".fav");
 favBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -69,7 +70,7 @@ favBtns.forEach((btn) => {
   });
 });
 
-// popup
+// ОТКРЫТИЕ ВКЛАДКИ РЕГИСТРАЦИИ
 const closePopupBtn = document.getElementById("popup-close");
 const openPopupBtn = document.querySelector(".header__user");
 const popup = document.querySelector(".popup");
@@ -90,7 +91,7 @@ if(closePopupBtn && popup) {
 }
 
 
-//menu burger
+// СОЗДАНИЕ АДАПТИВНОГО МЕНЮ-БУРГЕРА
 const menu = document.querySelector(".menu__body");
 const menuBtn = document.querySelector(".menu__icon");
 const menuLinks = document.querySelectorAll('.menu__link');

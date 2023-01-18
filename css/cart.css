@@ -57,6 +57,7 @@
   background-color: transparent;
   border: none;
 }
+/* УДАЛЕНИЕ КОНТУРА У ПОЛЯ ВВОДА */
 .cart__products .product__count input:focus {
   outline: none;
 }
@@ -129,6 +130,7 @@
   display: flex;
   gap: 8px;
 }
+/* ОФОРЛМНИЕ ПОЛЯ ВВОДА */
 .cart .promo__main input {
   background: #f9f9f9;
   border-radius: 5px;
@@ -139,6 +141,7 @@
   line-height: 21px;
   padding: 10px;
 }
+/* ОФОРМЛЕНИ КНОПКИ В КОРЗИНЕ */
 .cart .promo__main button {
   background-color: var(--accent-color);
   border-radius: 6px;
