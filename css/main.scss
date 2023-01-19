@@ -1,3 +1,4 @@
+// ИМПОРТ ШРИФТА
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
 
 :root {
@@ -55,6 +56,15 @@ input:focus {
 .stop-scrolling {
   height: 100%;
   overflow: hidden;
+}
+
+.btn {
+  background: var(--accent-color);
+  transition: all .3s;
+
+  &:hover {
+    background-color: #c48252;
+  }
 }
 
 /* --------------------------------- Header --------------------------------- */

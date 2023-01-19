@@ -1,9 +1,8 @@
-/* ИМПОРТ ШРИФТА */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
 :root {
   --accent-color: #db9969;
 }
-/* ОБНУЛЕНИЕ СТИЛЕЙ */
+
 * {
   margin: 0;
   padding: 0;
@@ -57,11 +56,15 @@ input:focus {
   overflow: hidden;
 }
 
+.btn {
+  background: var(--accent-color);
+  transition: all 0.3s;
+}
+.btn:hover {
+  background-color: #c48252;
+}
+
 /* --------------------------------- Header --------------------------------- */
-
-
-/* ОФОРМЛЕНИЕ ШАПКИ САЙТА */
-
 .header {
   background-color: #eeeeee;
   position: -webkit-sticky;
@@ -92,7 +95,6 @@ input:focus {
   padding: 0;
   cursor: pointer;
 }
-/* АДАПТИВ ДЛЯ ШАПКИ */
 @media (max-width: 1000px) {
   .header__actions {
     display: none;
@@ -145,7 +147,6 @@ input:focus {
   transform: rotate(45deg);
   bottom: calc(50% - 1px);
 }
-/* АДАПТИВ ДЛЯ ШАПКИ */
 @media (max-width: 1000px) {
   .header .menu__icon {
     display: block;
@@ -156,15 +157,13 @@ input:focus {
   align-items: center;
   gap: 50px;
 }
-/* АДАПТИВ ДЛЯ ШАПКИ */
 @media (max-width: 1000px) {
   .header .menu__list {
     flex-direction: column;
     margin: auto;
     gap: 80px;
   }
-} 
-/* АДАПТИВ ДЛЯ ШАПКИ  */
+}
 @media (max-width: 1000px) {
   .header .menu__body {
     position: absolute;
@@ -214,7 +213,6 @@ input:focus {
 .header .menu__link:hover::before {
   width: 100%;
 }
-/* АДАПТИВ ДЛЯ ШАПКИ */
 @media (max-width: 1000px) {
   .header .menu__link {
     color: #fff;
@@ -352,12 +350,11 @@ input:focus {
   text-align: center;
   color: #ffffff;
 }
-/* АДАПТИВ ДЛЯ ШАПКИ */
 
- @media (max-width: 1200px) {
+@media (max-width: 1200px) {
   .footer__container {
     display: flex;
     justify-content: space-around;
     gap: 0;
   }
-} 
+}

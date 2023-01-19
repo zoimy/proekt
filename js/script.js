@@ -71,21 +71,21 @@ favBtns.forEach((btn) => {
 });
 
 // ОТКРЫТИЕ ВКЛАДКИ РЕГИСТРАЦИИ
-const closePopupBtn = document.getElementById("popup-close");
-const openPopupBtn = document.querySelector(".header__user");
-const popup = document.querySelector(".popup");
+const closePopupUserBtn = document.getElementById("popup-user");
+const openPopupUserBtn = document.querySelector(".header__user");
+const popupUser = document.querySelector(".popup");
 const body = document.body;
 
-if(openPopupBtn && popup) {
-  openPopupBtn.addEventListener('click', () => {
-    popup.classList.add('open');
+if(openPopupUserBtn && popupUser) {
+  openPopupUserBtn.addEventListener('click', () => {
+    popupUser.classList.add('open');
     body.classList.add('stop-scrolling');
   })
 }
 
-if(closePopupBtn && popup) {
-  closePopupBtn.addEventListener('click', () => {
-    popup.classList.remove('open');
+if(closePopupUserBtn && popupUser) {
+  closePopupUserBtn.addEventListener('click', () => {
+    popupUser.classList.remove('open');
     body.classList.remove('stop-scrolling');
   })
 }

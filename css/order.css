@@ -1,5 +1,3 @@
-/* ОФОРМЛЕНИЕ СТРАНИЦЫ ЗАККАЗА */
-
 .order {
   padding-top: 40px;
   padding-bottom: 60px;
@@ -100,7 +98,6 @@
   background-color: transparent;
   border: none;
 }
-/* УБИРАЕМ КОНТУР */
 .order .cart__products .product__count input:focus {
   outline: none;
 }
