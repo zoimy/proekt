@@ -1,4 +1,4 @@
-<!-- СТРАНИЦА ДЛЯ ОФОРМЛЕНИЯ ЗАКАЗА -->
+<!-- СОЗДАНИЕ СТРАНИЦЫ С ПРОДУКТАМИ -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,18 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=, initial-scale=1.0" />
     <title>Document</title>
-		<!-- ПОДКЛЮЧАЕМ СТИЛИ -->
-    <link rel="stylesheet" href="css/order.css" />
-    <link rel="stylesheet" href="css/main.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    />
-
+		<!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ -->
+    <link rel="stylesheet" href="../css/product.css"/>
+    <link rel="stylesheet" href="../css/main.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </head>
   <body>
@@ -73,100 +66,71 @@
         </div>
       </div>
     </header>
-
     <main>
-      <section class="order">
-        <div class="order__container">
-          <div class="order__cart cart">
-            <div class="cart__title">Оформление заказа</div>
-            <div class="cart__products">
-              <div class="product">
-                <button class="product__button">
-                  <span class="material-icons-outlined"> close </span>
-                </button>
-                <div class="product__image">
-                  <img src="img/cart/1.png" alt="1" />
-                </div>
-                <div class="product__name">Кресло Барселона</div>
-                <div class="product__count">
-                  <button class="minus">
-                    <span class="material-icons-outlined"> remove </span>
-                  </button>
-                  <input type="number" value="1" / class="input" min="0">
-                  <button class="plus">
-                    <span class="material-icons-outlined"> add </span>
-                  </button>
-                </div>
-                <div class="product__price">$6738</div>
+      <section class="product">
+        <div class="prodcut__container">
+          <div class="product__path">
+            <a href="home.html">Товары</a>/<a href="#">Мебель</a>/<a href="#"
+              >Кресла</a
+            >/<a href="#">Кресло Барселона</a>
+          </div>
+          <div class="product__wrapper">
+            <div class="product__slider swiper mySwiper2">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
               </div>
-              <div class="product">
-                <button class="product__button">
-                  <span class="material-icons-outlined"> close </span>
-                </button>
-                <div class="product__image">
-                  <img src="img/cart/1.png" alt="1" />
-                </div>
-                <div class="product__name">Кресло Барселона</div>
-                <div class="product__count">
-                  <button class="minus">
-                    <span class="material-icons-outlined"> remove </span>
-                  </button>
-                  <input type="number" value="1" / class="input" min="0">
-                  <button class="plus">
-                    <span class="material-icons-outlined"> add </span>
-                  </button>
-                </div>
-                <div class="product__price">$6738</div>
+              <div class="swiper-button-next next">
+                <span class="material-icons-outlined"> arrow_forward_ios </span>
+              </div>
+              <div class="swiper-button-prev prev">
+                <span class="material-icons-outlined"> arrow_back_ios </span>
               </div>
             </div>
-          </div>
-          <div class="order__form">
-            <form>
-              <div class="form-block">
-                <label for="country">Район доставки</label>
-                <input list="country-list" id="country"/ placeholder="Выбрать">
-
-                <datalist id="country-list">
-                  <option value="Район 1"></option>
-                  <option value="Район 2"></option>
-                  <option value="Район 3"></option>
-                  <option value="Район 4"></option>
-                  <option value="Район 5"></option>
-                </datalist>
+            <div class="product__info">
+              <div class="product__title">Кресло Барселона</div>
+              <div class="product__subtitle">Ludwig Mies van der Rohe 1929</div>
+              <div class="product__description">
+                Кресло Barcelona, ​​один из самых узнаваемых предметов прошлого
+                века и икона современного движения, излучает простую
+                элегантность, олицетворяющую самый известный принцип Мис ван дер
+                Роэ: «меньше значит больше». <a href="#">Еще</a>
               </div>
-
-              <div class="form-block">
-                <label for="fname">ФИО</label>
-                <input
-                  type="text"
-                  id="fname"
-                  placeholder="Введите Ваше полное имя"
-                />
+              <div class="product__colors">
+                <div>Выберите цвет:</div>
+                <div class="colors-wrapper">
+                  <div class="color active"></div>
+                  <div class="color"></div>
+                  <div class="color"></div>
+                  <div class="color"></div>
+                </div>
               </div>
-              <div class="form-block">
-                <label for="tel">Телефон</label>
-                <input type="number" id="tel" placeholder="+123" />
+              <div class="product__price">
+                <span>$6738</span>
+                <div class="counter">
+                  <button class="minus">
+                    <span class="material-icons-outlined"> remove </span>
+                  </button>
+                  <input type="number" value="1" / class="input" min="0">
+                  <button class="plus">
+                    <span class="material-icons-outlined"> add </span>
+                  </button>
+                </div>
               </div>
-              <div class="form-block">
-                <label for="address">Адрес доставки</label>
-                <input type="text" id="address" placeholder="Введите адрес доставки" />
+              <div class="product__delivery">
+                Бесплатная доставка в <a href="#">Москву</a>
               </div>
-              <div class="form-block">
-                <label for="pay">Район доставки</label>
-                <input list="pay-list" id="pay" placeholder="Выбрать" />
-
-                <datalist id="pay-list">
-                  <option value="Наличными"></option>
-                  <option value="Картой"></option>
-                </datalist>
+              <div class="product__actions">
+                <button class="product__cart btn">Добавить в корзину</button>
+                <button class="product__favorite fav">
+                  <span class="material-icons-outlined"> favorite_border </span>
+                </button>
               </div>
-              <a href="home.html" class="btn">Оформить заказ</a>
-            </form>
+            </div>
           </div>
         </div>
       </section>
     </main>
-
     <footer class="footer">
       <div class="footer__container">
         <div class="footer__links">
@@ -224,16 +188,16 @@
           <div class="social__title">Мы в социальных сетях</div>
           <div class="social__links">
             <a href="#" class="social__link">
-              <img src="img/home/social/facebook.svg" alt="facebook-icon" />
+              <img src="../img/home/social/facebook.svg" alt="facebook-icon" />
             </a>
             <a href="#" class="social__link">
-              <img src="img/home/social/instagram.svg" alt="instagram-icon" />
+              <img src="../img/home/social/instagram.svg" alt="instagram-icon" />
             </a>
             <a href="#" class="social__link">
-              <img src="img/home/social/twitter.svg" alt="twitter-icon" />
+              <img src="../img/home/social/twitter.svg" alt="twitter-icon" />
             </a>
             <a href="#" class="social__link">
-              <img src="img/home/social/youtube.svg" alt="youtube-icon" />
+              <img src="../img/home/social/youtube.svg" alt="youtube-icon" />
             </a>
           </div>
         </div>
@@ -274,6 +238,6 @@
       </div>
     </div>
 		<!-- ПОДКЛЮЧАЕМ К ПАПКЕ JAVASCRIPT -->
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>

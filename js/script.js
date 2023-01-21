@@ -71,7 +71,7 @@ favBtns.forEach((btn) => {
 });
 
 // ОТКРЫТИЕ ВКЛАДКИ РЕГИСТРАЦИИ
-const closePopupUserBtn = document.getElementById("popup-user");
+const closePopupUserBtn = document.getElementById("popup-close");
 const openPopupUserBtn = document.querySelector(".header__user");
 const popupUser = document.querySelector(".popup");
 const body = document.body;
