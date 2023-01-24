@@ -1,0 +1,192 @@
+<!-- СОЗДАНИЕ ГЛАВНОЙ СТРАНИЦЫ МАГАЗИНА -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+		<!-- ПОДКЛЮЧАЕМ СSS СТИЛИ -->
+    <link rel="stylesheet" href="../css/collection.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <!-- Google icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
+    />
+    <!-- Swiper Slider -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <a href="home.html" class="header__logo">Logo</a>
+        <!-- <div class="header__search">
+          <form>
+            <input type="text" placeholder="Искать" />
+            <button type="submit">
+              <span class="material-icons-outlined">search</span>
+            </button>
+          </form>
+        </div> -->
+        <div class="header__menu menu">
+          <div class="menu__icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <nav class="menu__body">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="collection.html" class="menu__link">Коллекции</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Мебель</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Освещение</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Аксессуары</a>
+              </li>
+              <li class="menu__item">
+                <a href="contact.html" class="menu__link">Свяжитесь с нами</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__actions">
+          <a href="#" class="header__location">Москва</a>
+          <button class="header__user">
+            <span class="material-icons-outlined"> person </span>
+          </button>
+          <button class="header__favorite">
+            <span class="material-icons-outlined"> favorite_border </span>
+          </button>
+          <a href="cart.html" class="header__cart">
+            <span class="material-icons-outlined"> shopping_cart </span>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+
+      Страница для коллекций
+    <!-- Сюда пишешь код  -->
+
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__links">
+          <div class="block">
+            <div class="block__title">О компании</div>
+            <ul class="block__list">
+              <li class="block__item">
+                <a href="#" class="block__link">Работа и карьера у нас</a>
+              </li>
+              <li class="block__item">
+                <a href="#" class="block__link">Свяжитесь с нами</a>
+              </li>
+              <li class="block__item">
+                <a href="#" class="block__link">Контакты</a>
+              </li>
+              <li class="block__item">
+                <a href="#" class="block__link">Адресса магазинов</a>
+              </li>
+              <li class="block__item">
+                <a href="#" class="block__link">Напишите нам</a>
+              </li>
+              <li class="block__item">
+                <a href="#" class="block__link">Сотруднечество с нами</a>
+              </li>
+            </ul>
+          </div>
+          <div class="block">
+            <div class="block__title">Наши услуги</div>
+            <ul class="block__list">
+              <li class="block__item">
+                <a href="#" class="block__link">Доставка и самовывоз</a>
+              </li>
+              <li class="block__item">
+                <a href="#" class="block__link">Оплата и кредит</a>
+              </li>
+              <li class="block__item">
+                <a href="#" class="block__link">Оплата частями</a>
+              </li>
+              <li class="block__item">
+                <a href="#" class="block__link">Покупайте со Сбером</a>
+              </li>
+              <li class="block__item">
+                <a href="#" class="block__link">Возврат и обмен</a>
+              </li>
+              <li class="block__item">
+                <a href="#" class="block__link">Видеоконсультации</a>
+              </li>
+              <li class="block__item">
+                <a href="#" class="block__link">Все услуги</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__social">
+          <div class="social__title">Мы в социальных сетях</div>
+          <div class="social__links">
+            <a href="#" class="social__link">
+              <img src="../img/home/social/facebook.svg" alt="facebook-icon" />
+            </a>
+            <a href="#" class="social__link">
+              <img src="../img/home/social/instagram.svg" alt="instagram-icon" />
+            </a>
+            <a href="#" class="social__link">
+              <img src="../img/home/social/twitter.svg" alt="twitter-icon" />
+            </a>
+            <a href="#" class="social__link">
+              <img src="../img/home/social/youtube.svg" alt="youtube-icon" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="popup" class="popup">
+      <div class="popup__body">
+        <div class="popup__content">
+          <button class="popup__close" id="popup-close">
+            <span class="material-icons-outlined"> close </span>
+          </button>
+          <div class="popup__icon">
+            <span class="material-icons-outlined"> person </span>
+          </div>
+          <div class="popup__title">Регистрация</div>
+          <form class="popup__form">
+            <div class="block">
+              <span class="material-icons-outlined input-icon"> call </span>
+              <input type="number" class="tel" placeholder="Телефон" />
+            </div>
+
+            <div class="block">
+              <span class="material-icons-outlined input-icon"> key </span>
+              <input type="password" class="password" placeholder="Пароль" />
+            </div>
+            <div class="block">
+              <span class="material-icons-outlined input-icon"> key </span>
+              <input
+                type="password"
+                class="password-access"
+                placeholder="Подтвердите пароль"
+              />
+            </div>
+          </form>
+          <button class="popup__button">Зарегистрироваться</button>
+        </div>
+      </div>
+    </div>
+<!-- ПОДКЛЮЧАЕМ К ПАПКЕ JAVASCRIPT -->
+    <script src="../js/script.js"></script>
+  </body>
+</html>
