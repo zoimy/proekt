@@ -248,7 +248,21 @@
   }
 
   .subscription__form {
-    width: 400px;
+    width: 100%;
+  }
+
+  .products .product__image {
+    /* width: 420px; */
+    width: auto;
+    height: auto;
+    /* height: 272px; */
+    border: 1px solid lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+    transition: all 0.4s;
+    transition: all 0.3s ease-in-out;
   }
 
   .subscription__form form {
@@ -282,7 +296,7 @@
 }
 .subscription__container {
 	margin-left: 200px;
-	display: inline-block;
+	display: block;
 }
 .subscription__info p {
 	width: 600px;
@@ -308,14 +322,13 @@
 		margin-bottom: 30px;
 	}
 	.subscription__form form {
+
     display: flex;
     align-items: start;
     flex-direction: column;
     gap: 30px;
   }
-	.products {
-		padding-left: 60px;
-	}
+
 	.banner__full-container {
 		flex-direction: column;
 		display: flex;
@@ -326,7 +339,6 @@
 		width: 100%;
 	}
 	.banner__info {
-		max-width: 323px;
 		margin: 0;
 		width: 100%;
 		display: flex;
