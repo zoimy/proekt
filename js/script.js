@@ -5,10 +5,29 @@ var swiper = new Swiper(".mySwiper", {
   speed: 900,
   loop: true,
   slidesPerView: 6,
+	spaceBetween: 1,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+	breakpoints: {
+		320: {
+			slidesPerView:2,
+			spaceBetween:20
+		},
+		480: {
+			slidesPerView:3,
+			spaceBetween:30
+		},
+		640: {
+			slidesPerView: 3,
+			spaceBetween: 0,
+		},
+		1200: {
+			slidesPerView: 6,
+			spaceBetween: 40,
+		}
+	}
 });
 
 var swiper = new Swiper(".mySwiper2", {
@@ -21,6 +40,10 @@ var swiper = new Swiper(".mySwiper2", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+
+
+
 
 // СМЕНА ЦВЕТА ПРОДУКТА
 const colors = document.querySelectorAll(".color");
