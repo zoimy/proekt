@@ -238,6 +238,25 @@
   }
 }
 
+@media (max-width: 1316px){
+.products__title {
+	text-align: center;
+}
+.subscription__container {
+	margin-left: 200px;
+	display: inline-block;
+}
+.subscription__info p {
+	width: 600px;
+	margin-right: 200px;
+	margin-bottom: 20px;
+}
+
+.subscription__form input {
+	width: 65%;
+}
+}
+
 #testimonials {
 	width: 100%;
 	padding: 70px 0;
