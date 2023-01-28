@@ -102,6 +102,8 @@
   margin-top: 12px;
 }
 .slider .swiper-button-prev {
+  position: absolute;
+  top: 40%;
   height: 65px;
   background-image: url("../img/home/slider/arrow-prev.svg");
   background-repeat: no-repeat;
@@ -110,6 +112,8 @@
   display: none;
 }
 .slider .swiper-button-next {
+  position: absolute;
+  top: 40%;
   height: 65px;
   background-image: url("../img/home/slider/arrow-next.svg");
   background-repeat: no-repeat;
