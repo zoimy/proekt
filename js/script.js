@@ -24,8 +24,8 @@ var swiper = new Swiper(".mySwiper", {
 			spaceBetween: 0,
 		},
 		1200: {
-			slidesPerView: 6,
-			spaceBetween: 40,
+			slidesPerView: 5,
+			spaceBetween: 0,
 		}
 	}
 });
@@ -40,9 +40,6 @@ var swiper = new Swiper(".mySwiper2", {
     prevEl: ".swiper-button-prev",
   },
 });
-
-
-
 
 
 // СМЕНА ЦВЕТА ПРОДУКТА

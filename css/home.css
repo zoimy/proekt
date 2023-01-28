@@ -238,6 +238,44 @@
   }
 }
 
+@media (max-width: 414px) {
+  .testimonials {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;    
+  }
+
+  .subscription__form {
+    width: 400px;
+  }
+
+  .subscription__form form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .subscription__form input {
+    background: #ffffff;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 18px;
+    width: 100%;
+  }
+
+  .subscription__info {
+  /* width: 208px; */
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+}
+
 @media (max-width: 1316px){
 .products__title {
 	text-align: center;
@@ -273,7 +311,6 @@
 	font-size: 40px;
 }
 .testimonials {
-	width: 1100px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
