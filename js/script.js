@@ -132,3 +132,20 @@ if (menu && menuBtn) {
     });
   });
 }
+
+
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var showText = document.getElementById("showText");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    showText.innerHTML = "Показать"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    showText.innerHTML = "Скрыть"; 
+    moreText.style.display = "inline";
+  }
+}

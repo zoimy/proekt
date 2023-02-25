@@ -79,6 +79,11 @@
   color: #5d6477;
   text-decoration: underline;
 }
+.product__description .show-text {
+  font-size: 18px;
+  color: #5d6477;
+  text-decoration: underline;
+}
 .product__colors {
   font-family: "Arial";
   font-style: normal;

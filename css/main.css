@@ -64,6 +64,10 @@ input:focus {
   background-color: #c48252;
 }
 
+#more {
+  display: none;
+}
+
 /* --------------------------------- Header --------------------------------- */
 .header {
   background-color: #eeeeee;
