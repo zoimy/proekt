@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=, initial-scale=1.0" />
     <title>Document</title>
-		<!-- ПОДКЛЮЧАЕМ СSS СТИЛИ -->
+    <!-- ПОДКЛЮЧАЕМ СSS СТИЛИ -->
     <link rel="stylesheet" href="../css/home.css" />
     <link rel="stylesheet" href="../css/main.css" />
     <!-- Google icons -->
@@ -26,14 +26,6 @@
     <header class="header">
       <div class="header__container">
         <a href="home.html" class="header__logo">Logo</a>
-        <!-- <div class="header__search">
-          <form>
-            <input type="text" placeholder="Искать" />
-            <button type="submit">
-              <span class="material-icons-outlined">search</span>
-            </button>
-          </form>
-        </div> -->
         <div class="header__menu menu">
           <div class="menu__icon">
             <span></span>
@@ -43,7 +35,7 @@
           <nav class="menu__body">
             <ul class="menu__list">
               <li class="menu__item">
-                <a href="collection.html" class="menu__link">Коллекции</a>
+                <a href="#" class="menu__link">Коллекции</a>
               </li>
               <li class="menu__item">
                 <a href="#" class="menu__link">Мебель</a>
@@ -61,12 +53,8 @@
           </nav>
         </div>
         <div class="header__actions">
-          <a href="#" class="header__location">Москва</a>
           <button class="header__user">
             <span class="material-icons-outlined"> person </span>
-          </button>
-          <button class="header__favorite">
-            <span class="material-icons-outlined"> favorite_border </span>
           </button>
           <a href="cart.html" class="header__cart">
             <span class="material-icons-outlined"> shopping_cart </span>
@@ -74,6 +62,7 @@
         </div>
       </div>
     </header>
+
     <main>
       <section class="banner">
         <div class="banner__full-container">
@@ -86,7 +75,7 @@
               Наши новые поставки мебели в скандинавском стиле приятно вас
               удивят
             </p>
-            <button class="banner__button btn">Смотреть</button>
+            <button class="banner__button">Смотреть</button>
           </div>
         </div>
       </section>
@@ -155,7 +144,7 @@
             </div>
             <div class="product">
               <a href="product.html" class="product__image">
-                <img src="../img/home/products/2.png" alt="product-image"  />
+                <img src="../img/home/products/2.png" alt="product-image" />
               </a>
               <div class="product__title">Кресло Барселона</div>
               <div class="product__price">$6738</div>
@@ -224,7 +213,7 @@
       <section class="subscription">
         <div class="subscription__container">
           <div class="subscription__info">
-           Подпишитесь на нашу новостную рассылку и получите скидку 10% на
+            Подпишитесь на нашу новостную рассылку и получите скидку 10% на
             первую покупку!
           </div>
           <div class="subscription__form">
@@ -235,52 +224,73 @@
           </div>
         </div>
       </section>
-			<section id="testimonials">
-				<div class="testimonials__container">
-          <div class="title-text">
+      <section class="reviews">
+        <div class="reviews__container">
+          <div class="reviews__title">
             <h4>Отзывы клиентов</h4>
             <h1>Что люди думают о нас</h1>
           </div>
-          <div class="testimonials">
-            <div class="testi-box">
-              <div class="content">
-                <img src="/img/home/comments/quote.png" alt="" class="quote">
-                <p>Был определенный бюджет на мебель для спальни, и я очень довольна, что смогла приобрести в этом магазине мебель из Италии за такие деньги.</p>
-                <div class="user"><img src="/img/home/comments/5a57571175536.jpg" alt="" style="width: 150px;">
-                  <div class="info">
-                    <h4>Ирина Велкина</h4>
-                    <i>@IrinaVelkina</i>
-                  </div>
+      
+          <div class="reviews__wrapper">
+            <div class="block">
+              <div class="block__icon">
+                <img src="/img/home/comments/quote.svg" alt="">
+              </div>
+              <div class="block__info">
+                Был определенный бюджет на мебель для спальни, и я очень довольна, что
+                смогла приобрести в этом магазине мебель из Италии за такие деньги.
+              </div>
+              <div class="block__person person">
+                <div class="person__image">
+                  <span class="material-icons-outlined"> person </span>
+                </div>
+                <div class="person__info">
+                  <h2>Ирина Велкина</h2>
+                  <i>@IrinaVelkina</i>
                 </div>
               </div>
             </div>
-            <div class="testi-box">
-              <div class="content">
-                <img src="/img/home/comments/quote.png" alt="" class="quote" >
-                <p>Искал антивандальный обеденный стол, который раскладывался и становился бы в два раза больше.В этом магазине нашел. </p>
-                <div class="user"><img src="/img/home/comments/д-7.jpg" alt="" style="width: 150px;height: 110px;">
-                  <div class="info">
-                    <h4>Борис Васильев</h4>
-                    <i>@BorisVas</i>
-                  </div>
+      
+            <div class="block">
+              <div class="block__icon">
+                <img src="/img/home/comments/quote.svg" alt="">
+              </div>
+              <div class="block__info">
+                Был определенный бюджет на мебель для спальни, и я очень довольна, что
+                смогла приобрести в этом магазине мебель из Италии за такие деньги.
+              </div>
+              <div class="block__person person">
+                <div class="person__image">
+                  <span class="material-icons-outlined"> person </span>
+                </div>
+                <div class="person__info">
+                  <h2>Ирина Велкина</h2>
+                  <i>@IrinaVelkina</i>
                 </div>
               </div>
             </div>
-            <div class="testi-box">
-              <div class="content">
-                <img src="/img/home/comments/quote.png" alt="" class="quote">
-                <p>Магазин, в котором есть что выбрать и купить, ассортимент большой.</p>
-                  <div class="user"><img src="/img/home/comments/800647.jpg" alt="" style="width: 150px;">
-                  <div class="info">
-                    <h4>Евгений Альсо</h4>
-                    <i>@EvgeniyAlso</i>
-                  </div>
+      
+            <div class="block">
+              <div class="block__icon">
+                <img src="/img/home/comments/quote.svg" alt="">
+              </div>
+              <div class="block__info">
+                Был определенный бюджет на мебель для спальни, и я очень довольна, что
+                смогла приобрести в этом магазине мебель из Италии за такие деньги.
+              </div>
+              <div class="block__person person">
+                <div class="person__image">
+                  <span class="material-icons-outlined"> person </span>
+                </div>
+                <div class="person__info">
+                  <h2>Ирина Велкина</h2>
+                  <i>@IrinaVelkina</i>
                 </div>
               </div>
             </div>
           </div>
         </div>
-			</section>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer__container">
@@ -342,7 +352,10 @@
               <img src="../img/home/social/facebook.svg" alt="facebook-icon" />
             </a>
             <a href="#" class="social__link">
-              <img src="../img/home/social/instagram.svg" alt="instagram-icon" />
+              <img
+                src="../img/home/social/instagram.svg"
+                alt="instagram-icon"
+              />
             </a>
             <a href="#" class="social__link">
               <img src="../img/home/social/twitter.svg" alt="twitter-icon" />
@@ -388,7 +401,7 @@
         </div>
       </div>
     </div>
-<!-- ПОДКЛЮЧАЕМ К ПАПКЕ JAVASCRIPT -->
+    <!-- ПОДКЛЮЧАЕМ К ПАПКЕ JAVASCRIPT -->
     <script src="../js/script.js"></script>
   </body>
 </html>

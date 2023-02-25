@@ -102,8 +102,6 @@
   margin-top: 12px;
 }
 .slider .swiper-button-prev {
-  position: absolute;
-  top: 40%;
   height: 65px;
   background-image: url("../img/home/slider/arrow-prev.svg");
   background-repeat: no-repeat;
@@ -112,8 +110,6 @@
   display: none;
 }
 .slider .swiper-button-next {
-  position: absolute;
-  top: 40%;
   height: 65px;
   background-image: url("../img/home/slider/arrow-next.svg");
   background-repeat: no-repeat;
@@ -221,7 +217,6 @@
 .subscription__form input:focus {
   outline: none;
 }
-/* ОФОРМЛЕНИЕ КНОПКИ ПОДПИСКИ */
 .subscription__form button {
   background: var(--accent-color);
   border-radius: 10px;
@@ -234,27 +229,24 @@
   color: #ffffff;
   cursor: pointer;
 }
-/* АДАПТИВ */
+
 @media (max-width: 1200px) {
   .subscription button {
     padding: 12px 30px;
     font-size: 17px;
   }
 }
-
 @media (max-width: 414px) {
   .testimonials {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
-    gap: 30px;    
+    gap: 30px;
   }
-
   .subscription__form {
     width: 100%;
   }
-
   .products .product__image {
     /* width: 420px; */
     width: auto;
@@ -268,14 +260,12 @@
     transition: all 0.4s;
     transition: all 0.3s ease-in-out;
   }
-
   .subscription__form form {
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 30px;
   }
-
   .subscription__form input {
     background: #ffffff;
     border: 1px solid lightgray;
@@ -283,131 +273,122 @@
     padding: 18px;
     width: 100%;
   }
-
   .subscription__info {
-  /* width: 208px; */
-  font-family: "Arial";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
+    /* width: 208px; */
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+  }
 }
+@media (max-width: 1316px) {
+  .products__title {
+    text-align: center;
+  }
+  .subscription__container {
+    margin-left: 200px;
+    display: block;
+  }
+  .subscription__info p {
+    width: 600px;
+    margin-right: 200px;
+    margin-bottom: 20px;
+  }
+  .subscription__form input {
+    width: 65%;
+  }
 }
-
-@media (max-width: 1316px){
-.products__title {
-	text-align: center;
-}
-.subscription__container {
-	margin-left: 200px;
-	display: block;
-}
-.subscription__info p {
-	width: 600px;
-	margin-right: 200px;
-	margin-bottom: 20px;
-}
-
-.subscription__form input {
-	width: 65%;
-}
-}
-
 @media (max-width: 390px) {
-	.footer__social {
-		display: none;
-	}
+  .footer__social {
+    display: none;
+  }
 }
-
 @media (max-width: 390px) {
-	.subscription__info{
-		font-size: 20px;
-		width: 100%;
-		margin-bottom: 30px;
-	}
-	.subscription__form form {
-
+  .subscription__info {
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .subscription__form form {
     display: flex;
     align-items: start;
     flex-direction: column;
     gap: 30px;
   }
-
-	.banner__full-container {
-		flex-direction: column;
-		display: flex;
-		max-width: 1440px;
-		margin: 10 auto;
-	}
-	.banner__image {
-		width: 100%;
-	}
-	.banner__info {
-		/* margin: 0; */
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
+  .banner__full-container {
+    flex-direction: column;
+    display: flex;
+    max-width: 1440px;
+    margin: 10 auto;
+  }
+  .banner__image {
+    width: 100%;
+  }
+  .banner__info {
+    /* margin: 0; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
-
-#testimonials {
-	width: 100%;
-	padding: 70px 0;
+.reviews {
+  padding: 50px 0;
 }
-.title-text {
-	text-align: center;
-	padding-bottom: 75px;
+.reviews__title {
+  text-align: center;
+  margin-bottom: 30px;
 }
-.title-text h4 {
-	font-size: 20px;
-	color: #db9969;
+.reviews__title h1 {
+  font-size: 40px;
+  color: #000;
 }
-.title-text h1 {
-	font-size: 40px;
+.reviews__title h4 {
+  color: var(--accent-color);
+  font-size: 20px;
 }
-.testimonials {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	margin: auto;
+.reviews__wrapper {
+  padding: 30px 0;
+  display: flex;
+  gap: 40px;
 }
-.testimonials .testi-box {
-	width: 320px;
-	height: 380px;
-	background: #db9969;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 10px;
-	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-	transition: 0.8s;
+.reviews .block {
+  flex: 1 1;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.8s;
 }
-.testimonials .testi-box .content {
-	padding: 30px;
-	text-align: center;
+.reviews .block__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.testimonials .testi-box .content .quote {
-	width: 50px;
+.reviews .block__icon img {
+  width: 40px;
 }
-.testimonials .testi-box .content p {
-	padding: 20px 0 ;
-	text-align: justify;
-	font-weight: 500;
+.reviews .block__info {
+  margin: 20px 0;
+  text-align: justify;
 }
-.user {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 20px 0;
+.reviews .block:hover {
+  transform: translateY(-8px);
 }
-.info h4 {
-	font-size: 20px;
+.reviews .person {
+  display: flex;
+  justify-content: space-between;
 }
-.user img {
-	margin-right: 20px;
-	border-radius: 20px;
+.reviews .person__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 20px;
+  width: 150px;
+  border-radius: 10px;
 }
-.testimonials .testi-box:hover {
-	transform: translateY(-8px);
+.reviews .person__image span {
+  font-size: 40px;
+  color: #000;
 }
