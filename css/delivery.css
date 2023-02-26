@@ -1,0 +1,87 @@
+.delivery__title {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+.delivery__text {
+  line-height: 1.5;
+  margin: 30px 0;
+}
+.delivery__wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.delivery__contact {
+  margin: 30px 0;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.delivery__contact a {
+  color: #1e87f0;
+  text-decoration: none;
+  cursor: pointer;
+}
+.delivery .block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 26px;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  max-width: 370px;
+  min-height: 200px;
+}
+.delivery .block__number {
+  font-weight: 700;
+  font-size: 65px;
+  color: var(--accent-color);
+  display: block;
+  text-align: center;
+}
+.delivery .block__text {
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.delivery .questions a {
+  font-size: 20px;
+  font-weight: 700;
+}
+.delivery__banner {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #ebebf5;
+  background-image: url("/img/delivery/car.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  box-shadow: 0px 0px 18.0727px rgba(0, 0, 0, 0.03);
+  border-radius: 18px;
+  padding: 40px;
+  height: 256px;
+}
+.delivery__banner h2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 38px;
+  color: #333333;
+  width: 490px;
+  margin-bottom: 43px;
+}
+.delivery__banner a {
+  background: var(--accent-color);
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  color: #ffffff;
+  padding: 10px 32px;
+}
