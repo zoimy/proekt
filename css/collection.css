@@ -1,72 +1,51 @@
-.container-col {
-  margin-top: 200px;
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap'); 
+
+* {
+  box-sizing: border-box;
 }
 
-.product {
-  margin-bottom: 30px;
-  margin-left: 100px;
+main {
+  font-family: 'Muli', sans-serif;
+  overflow: hidden;
+  margin: 20px 100px;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
 }
-
-.image {
-  margin-bottom: 10px;
+.container {
+	width: 100%;
+	display: flex;
+	padding: 0 20px;
 }
-
-.image img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 7px;
+.slide {
+	height: 80vh;
+	border-radius: 20px;
+	margin: 10px;
+	cursor: pointer;
+	color: #fff;
+	flex: 1;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	transition: all 500ms ease-in-out;
 }
-
-.info h3 {
-  font-size: 21px;
-  margin-bottom: 0;
+.slide h3 {
+	position: absolute;
+	font-size: 34px;
+	bottom: 20px;
+	left: 20px;
+	margin: 0;
+	opacity: 0;
+	text-shadow: black 1px 1px 0, black -1px -1px 0, 
+	black -1px 1px 0, black 1px -1px 0;
 }
-
-.rating {
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style-type: none;
+.slide.active {
+	flex: 10;
 }
-
-.rating li {
-  display: inline-block;
-  color: #ffc107;
-}
-
-.info-price {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  gap: 100px;
-}
-
-.add-to-cart {
-  border: none;
-  width: 40px;
-  height: 40px;
-  display: inline-block;
-  align-items: center;
-  justify-content: center;
-  background-color: #8bc34a;
-  color: #fff;
-  border-radius: 10px;
-}
-
-.price {
-  font-weight: 700;
-  font-size: 18px;
-}
-
-.footer {
-  margin-top: 200px;
-}
-
-.collection__container {
-  display: flex;
-}
-.collection .product {
-  flex: 1 1;
-}
-.collection {
-	margin-top: 150px;
+.slide.active h3 {
+	opacity: 1;
+	transition: opacity 0.3s ease-in 0.4s; 
 }
