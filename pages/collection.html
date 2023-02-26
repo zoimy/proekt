@@ -5,7 +5,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=0, initial-scale=1.0" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
     <title>Document</title>
 		<!-- ПОДКЛЮЧАЕМ СSS СТИЛИ -->
     <link rel="stylesheet" href="../css/collection.css" />
@@ -26,6 +26,14 @@
     <header class="header">
       <div class="header__container">
         <a href="home.html" class="header__logo">Logo</a>
+        <!-- <div class="header__search">
+          <form>
+            <input type="text" placeholder="Искать" />
+            <button type="submit">
+              <span class="material-icons-outlined">search</span>
+            </button>
+          </form>
+        </div> -->
         <div class="header__menu menu">
           <div class="menu__icon">
             <span></span>
@@ -35,7 +43,7 @@
           <nav class="menu__body">
             <ul class="menu__list">
               <li class="menu__item">
-                <a href="#" class="menu__link">Коллекции</a>
+                <a href="collection.html" class="menu__link">Коллекции</a>
               </li>
               <li class="menu__item">
                 <a href="#" class="menu__link">Мебель</a>
@@ -53,8 +61,12 @@
           </nav>
         </div>
         <div class="header__actions">
+          <a href="#" class="header__location">Москва</a>
           <button class="header__user">
             <span class="material-icons-outlined"> person </span>
+          </button>
+          <button class="header__favorite">
+            <span class="material-icons-outlined"> favorite_border </span>
           </button>
           <a href="cart.html" class="header__cart">
             <span class="material-icons-outlined"> shopping_cart </span>
@@ -62,17 +74,78 @@
         </div>
       </div>
     </header>
-
     <main>
 
-      <!-- Страница для коллекций -->
+      <!-- Страница для коллекций--------------------------=========================================================	 -->
     <!-- Сюда пишешь код  -->
-			<div class="page">
-				<h2 class="title">Новинки коллекций</h2>
-				<div class="product">
-					<div class="product-item">
-						<img src="img\collection\6.png" alt="">
+			<div class="container-col ">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="product">
+							<div class="image">
+								<img src="../img/collection/6.png" alt="">
+							</div>
+							<div class="info">
+								<h3>Название товара</h3>
+								<ul class="rating">
+									<li><ion-icon name="star"></ion-icon></li>
+									<li><ion-icon name="star"></ion-icon></li>
+									<li><ion-icon name="star"></ion-icon></li>
+									<li><ion-icon name="star"></ion-icon></li>
+									<li><ion-icon name="star-half-outline"></ion-icon></li>
+								</ul>
+								<div class="info-price">
+									<span class="price">230 <small>$</small></span>
+									<button class="add-to-cart"><ion-icon name="add-circle-outline"></ion-icon></button>
+								</div>
+							</div>
+						</div>
 					</div>
+					
+					<div class="col-md-4">
+						<div class="product">
+							<div class="image">
+								<img src="../img/collection/6.png" alt="">
+							</div>
+							<div class="info">
+								<h3>Название товара</h3>
+								<ul class="rating">
+									<li><ion-icon name="star"></ion-icon></li>
+									<li><ion-icon name="star"></ion-icon></li>
+									<li><ion-icon name="star"></ion-icon></li>
+									<li><ion-icon name="star"></ion-icon></li>
+									<li><ion-icon name="star-half-outline"></ion-icon></li>
+								</ul>
+								<div class="info-price">
+									<span class="price">230 <small>$</small></span>
+									<button class="add-to-cart"><ion-icon name="add-circle-outline"></ion-icon></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="product">
+							<div class="image">
+								<img src="../img/collection/6.png" alt="">
+							</div>
+							<div class="info">
+								<h3>Название товара</h3>
+								<ul class="rating">
+									<li><ion-icon name="star"></ion-icon></li>
+									<li><ion-icon name="star"></ion-icon></li>
+									<li><ion-icon name="star"></ion-icon></li>
+									<li><ion-icon name="star"></ion-icon></li>
+									<li><ion-icon name="star-half-outline"></ion-icon></li>
+								</ul>
+								<div class="info-price">
+									<span class="price">230 <small>$</small></span>
+									<button class="add-to-cart"><ion-icon name="add-circle-outline"></ion-icon></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					
 				</div>
 			</div>
     </main>
@@ -184,5 +257,7 @@
     </div>
 <!-- ПОДКЛЮЧАЕМ К ПАПКЕ JAVASCRIPT -->
     <script src="../js/script.js"></script>
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
 </html>
