@@ -88,6 +88,9 @@ input:focus {
   line-height: 28px;
   color: #000000;
 }
+.header__logo span {
+  color: var(--accent-color);
+}
 .header__actions {
   display: flex;
   align-items: center;
