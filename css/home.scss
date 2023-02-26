@@ -428,6 +428,10 @@
 
   .block {
     flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgb(0 0 0 / 10%);
@@ -456,19 +460,20 @@
   .person {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 20px;
     // .person__image
     &__image {
       display: flex;
       justify-content: center;
       align-items: center;
       background-color: #f1f1f1;
-      padding: 20px;
       width: 150px;
       border-radius: 10px;
+    
 
-      span {
-        font-size: 40px;
-        color: #000;
+      img {
+        border-radius: 20px;
       }
     }
     // .person__info
