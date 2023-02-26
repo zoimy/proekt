@@ -67,3 +67,6 @@
 .collection .product {
   flex: 1 1;
 }
+.collection {
+	margin-top: 150px;
+}
