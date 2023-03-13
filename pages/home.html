@@ -133,7 +133,7 @@
               <div class="product__title">Кресло Барселона</div>
               <div class="product__price">180 <small>$</small></div>
               <div class="product__actions">
-                <button class="product__cart btn">В корзину</button>
+                <button class="product__cart btn snackbar-btn-cart">В корзину</button>
                 <button class="product__favorite fav">
                   <span class="material-icons-outlined"> favorite_border </span>
                 </button>
@@ -146,7 +146,7 @@
               <div class="product__title">Стул Mobi-Art K-02 Venus Black</div>
               <div class="product__price">200 <small>$</small></div>
               <div class="product__actions">
-                <button class="product__cart btn">В корзину</button>
+                <button class="product__cart btn snackbar-btn-cart">В корзину</button>
                 <button class="product__favorite fav">
                   <span class="material-icons-outlined"> favorite_border </span>
                 </button>
@@ -161,7 +161,7 @@
               </div>
               <div class="product__price">230 <small>$</small></div>
               <div class="product__actions">
-                <button class="product__cart btn">В корзину</button>
+                <button class="product__cart btn snackbar-btn-cart">В корзину</button>
                 <button class="product__favorite fav">
                   <span class="material-icons-outlined"> favorite_border </span>
                 </button>
@@ -174,7 +174,7 @@
               <div class="product__title">Cтол AG DT1-051 100x70</div>
               <div class="product__price">260 <small>$</small></div>
               <div class="product__actions">
-                <button class="product__cart btn">В корзину</button>
+                <button class="product__cart btnsnackbar-btn-cart">В корзину</button>
                 <button class="product__favorite fav">
                   <span class="material-icons-outlined"> favorite_border </span>
                 </button>
@@ -187,7 +187,7 @@
               <div class="product__title">Стол Evelin Cooper Chocolate</div>
               <div class="product__price">320 <small>$</small></div>
               <div class="product__actions">
-                <button class="product__cart btn">В корзину</button>
+                <button class="product__cart btn snackbar-btn-cart">В корзину</button>
                 <button class="product__favorite fav">
                   <span class="material-icons-outlined"> favorite_border </span>
                 </button>
@@ -200,7 +200,7 @@
               <div class="product__title">Кресло Metta Samurai 6 Black</div>
               <div class="product__price">140 <small>$</small></div>
               <div class="product__actions">
-                <button class="product__cart btn">В корзину</button>
+                <button class="product__cart btn snackbar-btn-cart">В корзину</button>
                 <button class="product__favorite fav">
                   <span class="material-icons-outlined"> favorite_border </span>
                 </button>
@@ -216,10 +216,9 @@
             первую покупку!
           </div>
           <div class="subscription__form">
-            <form>
+            <form id="subForm">
               <input type="text" placeholder="Введите ваш e-mail" />
-              <a onclick="myFunction()" id='knopka' href="#" class="btn">Подписаться</a>
-							<div id="snackbar">Вы подписались на новостную рассылку</div>
+              <button class="btn snackbar-btn-sub">Подписаться</button>
             </form>
           </div>
         </div>
@@ -241,7 +240,7 @@
                 работы, общение с клиентом. Все просто супер. Доставка была
                 организована в срок. Монтажники молодцы, ребята работали
                 слаженно, четко без проблем. Я в восторге осталась от своей
-                кухни. Теперь дело за шкафами) Спасибо, Вам!
+                кухни. Теперь дело за шкафами Спасибо, Вам!
               </div>
               <div class="block__person person">
                 <div class="person__image">
@@ -397,6 +396,10 @@
         </div>
       </div>
     </div>
+
+
+    <div class="snackbar snackbar-sub">Вы подписались на новостную рассылку</div>
+    <div class="snackbar snackbar-cart">Продукт добавлен в корзину</div>
     <!-- ПОДКЛЮЧАЕМ К ПАПКЕ JAVASCRIPT -->
     <script src="../js/script.js"></script>
   </body>

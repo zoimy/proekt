@@ -5,29 +5,29 @@ var swiper = new Swiper(".mySwiper", {
   speed: 900,
   loop: true,
   slidesPerView: 6,
-	spaceBetween: 1,
+  spaceBetween: 1,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-	breakpoints: {
-		320: {
-			slidesPerView:2,
-			spaceBetween:20
-		},
-		480: {
-			slidesPerView:3,
-			spaceBetween:30
-		},
-		640: {
-			slidesPerView: 3,
-			spaceBetween: 40,
-		},
-		1200: {
-			slidesPerView: 5,
-			spaceBetween: 10,
-		}
-	}
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    480: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+    1200: {
+      slidesPerView: 5,
+      spaceBetween: 10,
+    },
+  },
 });
 
 var swiper = new Swiper(".mySwiper2", {
@@ -40,7 +40,6 @@ var swiper = new Swiper(".mySwiper2", {
     prevEl: ".swiper-button-prev",
   },
 });
-
 
 // СМЕНА ЦВЕТА ПРОДУКТА
 const colors = document.querySelectorAll(".color");
@@ -96,72 +95,111 @@ const openPopupUserBtn = document.querySelector(".header__user");
 const popupUser = document.querySelector(".popup");
 const body = document.body;
 
-if(openPopupUserBtn && popupUser) {
-  openPopupUserBtn.addEventListener('click', () => {
-    popupUser.classList.add('open');
-    body.classList.add('stop-scrolling');
-  })
+if (openPopupUserBtn && popupUser) {
+  openPopupUserBtn.addEventListener("click", () => {
+    popupUser.classList.add("open");
+    body.classList.add("stop-scrolling");
+  });
 }
 
-if(closePopupUserBtn && popupUser) {
-  closePopupUserBtn.addEventListener('click', () => {
-    popupUser.classList.remove('open');
-    body.classList.remove('stop-scrolling');
-  })
+if (closePopupUserBtn && popupUser) {
+  closePopupUserBtn.addEventListener("click", () => {
+    popupUser.classList.remove("open");
+    body.classList.remove("stop-scrolling");
+  });
 }
-
 
 // СОЗДАНИЕ АДАПТИВНОГО МЕНЮ-БУРГЕРА
 const menu = document.querySelector(".menu__body");
 const menuBtn = document.querySelector(".menu__icon");
-const menuLinks = document.querySelectorAll('.menu__link');
-
+const menuLinks = document.querySelectorAll(".menu__link");
 
 if (menu && menuBtn) {
   menuBtn.addEventListener("click", () => {
     menu.classList.toggle("active");
     menuBtn.classList.toggle("active");
-    body.classList.toggle('stop-scrolling');
+    body.classList.toggle("stop-scrolling");
   });
 
   menuLinks.forEach((link) => {
     link.addEventListener("click", () => {
       menu.classList.remove("active");
       menuBtn.classList.remove("active");
-      body.classList.remove('stop-scrolling');
+      body.classList.remove("stop-scrolling");
     });
   });
 }
 
-
-function myFunction() {
+function myFunction1() {
   var dots = document.getElementById("dots");
   var moreText = document.getElementById("more");
   var showText = document.getElementById("showText");
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    showText.innerHTML = "Показать"; 
+    showText.innerHTML = "Показать";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    showText.innerHTML = "Скрыть"; 
+    showText.innerHTML = "Скрыть";
     moreText.style.display = "inline";
   }
 }
 
-document.getElementById('knopka').addEventListener("click", function(event){
-	event.preventDefault();
-	return false;
-}, false);
-// Создаем выплывающее сообщение  
-function myFunction() {
-  // Находим контейнер с сообщением
-  var x = document.getElementById("snackbar");
+const snackbarBtnsCart = document.querySelectorAll(".snackbar-btn-cart");
 
-  // Добавляем контейнеру класс "show"
-  x.className = "show";
+snackbarBtnsCart.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
 
-  // Через 3 секунды удаляем класс "show" у контейнера с сообщением
-  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-}
+    var x = document.querySelector(".snackbar-cart");
+
+    // Добавляем контейнеру класс "show"
+    // x.className = "show";
+    x.classList.add('show')
+
+    // Через 3 секунды удаляем класс "show" у контейнера с сообщением
+    setTimeout(function () {
+      x.classList.remove('show')
+    }, 3000);
+  });
+});
+
+
+
+const snackbarBtnsSub = document.querySelectorAll(".snackbar-btn-sub");
+const subForm = document.getElementById('subForm');
+snackbarBtnsSub.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    subForm.reset();
+
+    var x = document.querySelector(".snackbar-sub");
+
+    // Добавляем контейнеру класс "show"
+    // x.className = "show";
+    x.classList.add('show')
+
+    // Через 3 секунды удаляем класс "show" у контейнера с сообщением
+    setTimeout(function () {
+      x.classList.remove('show')
+    }, 3000);
+  });
+});
+
+
+
+// // Создаем выплывающее сообщение
+// function myFunction() {
+//   // Находим контейнер с сообщением
+//   var x = document.getElementById("snackbar");
+
+//   // Добавляем контейнеру класс "show"
+//   x.className = "show";
+
+//   // Через 3 секунды удаляем класс "show" у контейнера с сообщением
+//   setTimeout(function () {
+//     x.className = x.className.replace("show", "");
+//   }, 3000);
+// }
