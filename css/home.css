@@ -217,7 +217,7 @@
 .subscription__form input:focus {
   outline: none;
 }
-.subscription__form button {
+.subscription__form a {
   background: var(--accent-color);
   border-radius: 10px;
   padding: 12px 62px;

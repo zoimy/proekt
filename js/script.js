@@ -149,3 +149,8 @@ function myFunction() {
     moreText.style.display = "inline";
   }
 }
+
+document.getElementById('knopka').addEventListener("click", function(event){
+	event.preventDefault();
+	return false;
+}, false);
