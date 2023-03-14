@@ -163,11 +163,11 @@
 .products .product__price {
   margin: 16px 0;
 }
-.products .product__actions {
+/* .products .product__actions {
   display: flex;
   align-items: center;
   gap: 55px;
-}
+} */
 .products .product__cart {
   background: var(--accent-color);
   border-radius: 10px;

@@ -190,16 +190,18 @@ snackbarBtnsSub.forEach((btn) => {
 
 
 
-// // Создаем выплывающее сообщение
-// function myFunction() {
-//   // Находим контейнер с сообщением
-//   var x = document.getElementById("snackbar");
+const products = document.querySelectorAll('.card');
 
-//   // Добавляем контейнеру класс "show"
-//   x.className = "show";
-
-//   // Через 3 секунды удаляем класс "show" у контейнера с сообщением
-//   setTimeout(function () {
-//     x.className = x.className.replace("show", "");
-//   }, 3000);
-// }
+products.forEach((el, id) => {
+  const price = el.childNodes[5].innerText;
+  const title = el.childNodes[3].innerText;
+  const btn = el.childNodes[7];
+  
+  btn.addEventListener('click', () => {
+    const cartStorage = localStorage.getItem('cart') || '[]';
+    const cart = JSON.parse(cartStorage);
+    const product = {title, price};
+    localStorage.setItem('cart', JSON.stringify([...cart, product]))
+    
+  })
+})
