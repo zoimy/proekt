@@ -182,7 +182,7 @@ const products = document.querySelectorAll('.card');
 products.forEach(el => {
   const imgPath = el.childNodes[1].children[0].src;
   const title = el.childNodes[3].innerText;
-  const price = el.childNodes[5].childNodes[0].innerText
+  const price = el.childNodes[5].childNodes[1].innerText
 
   const productId =  Math.random();
 

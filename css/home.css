@@ -121,15 +121,6 @@
 .products {
   padding-bottom: 80px;
 }
-.products__title {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 33px;
-  color: #000000;
-  margin-bottom: 20px;
-}
 .products__wrapper {
   display: flex;
   gap: 25px;
