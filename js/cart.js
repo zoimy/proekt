@@ -3,7 +3,7 @@ let cartStorage = JSON.parse(localStorage.getItem("cart") || "[]");
 
 let orderSide = document.querySelector(".review");
 let sum = 0;
-
+let sumPromo = 0;
 
 function renderCart() {
   cartSide.innerHTML = ``;
@@ -30,7 +30,7 @@ function renderCart() {
     <div class="product__price">$${price}</div>
   </div>`;
     cartSide.appendChild(newCard);
-    console.log(price)
+    console.log(price);
     sum += +price;
   });
 }
@@ -47,8 +47,10 @@ function showEmptyCart() {
 
 function renderOrderReview() {
   orderSide.innerHTML = ``;
-  if(sum <= 0) {
-    sum = 0
+  if(!cartStorage.length > 0) {
+    sumPromo = 0;
+  } else {
+    sumPromo = sum - 100;
   }
   orderSide.innerHTML = `<div class="review__title">Обзор заказа</div>
   <div class="review__block">
@@ -61,18 +63,16 @@ function renderOrderReview() {
   </div>
   <div class="review__block">
     <span>Итого к оплате:</span>
-    <span>$${sum - 100}</span>
+    <span>$${sumPromo}</span>
   </div>
   <a href="order.html" class="review__button btn"
     >Оформить заказ</a
   >`;
-
 }
 
 if (cartStorage.length) {
   renderCart();
   renderOrderReview();
-
 
   const deleteBtns = document.querySelectorAll(".product__button");
   deleteBtns.forEach((btn) => {
@@ -97,9 +97,13 @@ if (cartStorage.length) {
 
   const clearBtn = document.getElementById("clear");
   clearBtn.addEventListener("click", () => {
-    cartSide.innerHTML = ``;
-    localStorage.clear();
-    showEmptyCart();
+    const a = confirm("Вы точно хотите очистить корзину?");
+    if (a) {
+      renderOrderReview();
+      cartSide.innerHTML = ``;
+      localStorage.clear();
+      showEmptyCart();
+    }
   });
 } else {
   showEmptyCart();

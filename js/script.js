@@ -1,3 +1,27 @@
+// ЗАГРУЗКА СТРАНИЦЫ
+window.onload = function () {
+  window.setTimeout(fadeout, 1000);
+}
+
+function fadeout() {
+  document.querySelector('.preloader').style.opacity = '0';
+  document.querySelector('.preloader').style.display = 'none';
+}
+
+
+// СКРОЛЛ НАВЕРХ
+const toTopBtn = document.getElementById("to-top");
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    toTopBtn.style.visibility = "visible";
+  } else {
+    toTopBtn.style.visibility = "hidden";
+  }
+}
+
+
 // СОЗДАЕМ СЛАЙДЕР
 var swiper = new Swiper(".mySwiper", {
   autoplay: true,
