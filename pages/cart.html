@@ -1,6 +1,5 @@
 <!-- СОЗДАНИЕ СТРАНИЦЫ С КОРЗИНОЙ -->
 
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=, initial-scale=1.0" />
     <title>Document</title>
-		<!-- ПОДКЛЮЧАЕМ СSS СТИЛИ -->
+    <!-- ПОДКЛЮЧАЕМ СSS СТИЛИ -->
     <link rel="stylesheet" href="../css/cart.css" />
     <link rel="stylesheet" href="../css/main.css" />
     <link
@@ -63,70 +62,21 @@
     <main>
       <section class="cart">
         <div class="cart__container">
-          <div class="cart__title">Корзина</div>
+          <div class="cart__title">
+            <span>Корзина</span>
+            <button id="clear" class="btn">Очистить корзину</button>
+          </div>
+
           <div class="cart__wrapper">
-            <div class="cart__products">
-              <div class="product">
-                <button class="product__button">
-                  <span class="material-icons-outlined"> close </span>
-                </button>
-                <div class="product__image">
-                  <img src="../img/cart/1.png" alt="1" />
-                </div>
-                <div class="product__name">Кресло Барселона</div>
-                <div class="product__count">
-                  <button class="minus">
-                    <span class="material-icons-outlined"> remove </span>
-                  </button>
-                  <input type="number" value="1" / class="input" min="0">
-                  <button class="plus">
-                    <span class="material-icons-outlined"> add </span>
-                  </button>
-                </div>
-                <div class="product__price">$6738</div>
-              </div>
-              <div class="product">
-                <button class="product__button">
-                  <span class="material-icons-outlined"> close </span>
-                </button>
-                <div class="product__image">
-                  <img src="../img/cart/1.png" alt="1" />
-                </div>
-                <div class="product__name">Кресло Барселона</div>
-                <div class="product__count">
-                  <button class="minus">
-                    <span class="material-icons-outlined"> remove </span>
-                  </button>
-                  <input type="number" value="1" / class="input" min="0">
-                  <button class="plus">
-                    <span class="material-icons-outlined"> add </span>
-                  </button>
-                </div>
-                <div class="product__price">$6738</div>
-              </div>
-            </div>
+            <div class="cart__products"></div>
             <div class="cart__order">
               <div class="review">
-                <div class="review__title">Обзор заказа</div>
-                <div class="review__block">
-                  <span>Цена заказа:</span>
-                  <span>$6838</span>
-                </div>
-                <div class="review__block">
-                  <span>Промокод: </span>
-                  <span>-$100</span>
-                </div>
-                <div class="review__block">
-                  <span>Итого к оплате:</span>
-                  <span>$6738</span>
-                </div>
-                <a href="order.html" class="review__button btn">Оформить заказ</a>
               </div>
               <div class="promo">
                 <div class="promo__title">Промокод</div>
                 <div class="promo__main">
                   <div class="promo__input">
-                    <input type="text" placeholder="Введите промокод"/>
+                    <input type="text" placeholder="Введите промокод" />
                   </div>
                   <button class="promo__button btn">Потвердить</button>
                 </div>
@@ -149,13 +99,17 @@
                 <a href="contact.html" class="block__link">Контакты</a>
               </li>
               <li class="block__item">
-                <a href="delivery.html" class="block__link">Адресса магазинов</a>
+                <a href="delivery.html" class="block__link"
+                  >Адресса магазинов</a
+                >
               </li>
               <li class="block__item">
                 <a href="contact.html" class="block__link">Напишите нам</a>
               </li>
               <li class="block__item">
-                <a href="contact.html" class="block__link">Сотруднечество с нами</a>
+                <a href="contact.html" class="block__link"
+                  >Сотруднечество с нами</a
+                >
               </li>
             </ul>
           </div>
@@ -163,7 +117,9 @@
             <div class="block__title">Наши услуги</div>
             <ul class="block__list">
               <li class="block__item">
-                <a href="delivery.html" class="block__link">Доставка и самовывоз</a>
+                <a href="delivery.html" class="block__link"
+                  >Доставка и самовывоз</a
+                >
               </li>
               <li class="block__item">
                 <a href="cart.html" class="block__link">Оплата и кредит</a>
@@ -177,16 +133,28 @@
         <div class="footer__social">
           <div class="social__title">Мы в социальных сетях</div>
           <div class="social__links">
-            <a target="_blank" href="https://www.facebook.com/pushkinsenate" class="social__link">
+            <a
+              target="_blank"
+              href="https://www.facebook.com/pushkinsenate"
+              class="social__link"
+            >
               <img src="../img/home/social/facebook.svg" alt="facebook-icon" />
             </a>
-            <a target="_blank" href="https://www.instagram.com/pushkin.high.school.senate/" class="social__link">
+            <a
+              target="_blank"
+              href="https://www.instagram.com/pushkin.high.school.senate/"
+              class="social__link"
+            >
               <img
                 src="../img/home/social/instagram.svg"
                 alt="instagram-icon"
               />
             </a>
-            <a target="_blank" href="https://www.youtube.com/@pushkinschoolsenate7647" class="social__link">
+            <a
+              target="_blank"
+              href="https://www.youtube.com/@pushkinschoolsenate7647"
+              class="social__link"
+            >
               <img src="../img/home/social/youtube.svg" alt="youtube-icon" />
             </a>
           </div>
@@ -227,7 +195,7 @@
         </div>
       </div>
     </div>
-		<!-- ПОДКЛЮЧЕНИЕ К ПАПКЕ JAVASCRIPT -->
+    <!-- ПОДКЛЮЧЕНИЕ К ПАПКЕ JAVASCRIPT -->
     <script src="../js/script.js"></script>
     <script src="../js/cart.js"></script>
   </body>

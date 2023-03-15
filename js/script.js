@@ -75,20 +75,6 @@ if (plusBtn) {
   });
 }
 
-// ДОБАВЛЕНИЕ ТОВАРА В ИЗБРАННЫЕ
-const favBtns = document.querySelectorAll(".fav");
-favBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    if (btn.children[0].innerText == "favorite_border") {
-      console.log("clicked");
-      btn.children[0].innerText = "favorite";
-    } else if (btn.children[0].innerText == "favorite") {
-      console.log("clicked");
-      btn.children[0].innerText = "favorite_border";
-    }
-  });
-});
-
 // ОТКРЫТИЕ ВКЛАДКИ РЕГИСТРАЦИИ
 const closePopupUserBtn = document.getElementById("popup-close");
 const openPopupUserBtn = document.querySelector(".header__user");
@@ -130,7 +116,8 @@ if (menu && menuBtn) {
   });
 }
 
-function myFunction1() {
+// ПОКАЗАТЬ БОЛЬШЕ-МЕНЬШЕ ТЕКСТА
+function showLessMore() {
   var dots = document.getElementById("dots");
   var moreText = document.getElementById("more");
   var showText = document.getElementById("showText");
@@ -146,6 +133,7 @@ function myFunction1() {
   }
 }
 
+// ПОЯВЛЕНИЕ СООБЩЕНИЯ(УВЕДОМЛЕНИЯ) ДОБАВЛЕНИЯ ПРОДУКТА
 const snackbarBtnsCart = document.querySelectorAll(".snackbar-btn-cart");
 
 snackbarBtnsCart.forEach((btn) => {
@@ -166,7 +154,7 @@ snackbarBtnsCart.forEach((btn) => {
 });
 
 
-
+// ПОЯВЛЕНИЕ СООБЩЕНИЯ(УВЕДОМЛЕНИЯ) ПОДПИСКИ НА РАССЫЛКУ
 const snackbarBtnsSub = document.querySelectorAll(".snackbar-btn-sub");
 const subForm = document.getElementById('subForm');
 snackbarBtnsSub.forEach((btn) => {
@@ -189,19 +177,21 @@ snackbarBtnsSub.forEach((btn) => {
 });
 
 
-
+// РЕАЛИЗАЦИЯ КОРЗИНЫ
 const products = document.querySelectorAll('.card');
-
-products.forEach((el, id) => {
-  const price = el.childNodes[5].innerText;
+products.forEach(el => {
+  const imgPath = el.childNodes[1].children[0].src;
   const title = el.childNodes[3].innerText;
+  const price = el.childNodes[5].childNodes[0].innerText
+
+  const productId =  Math.random();
+
   const btn = el.childNodes[7];
   
   btn.addEventListener('click', () => {
     const cartStorage = localStorage.getItem('cart') || '[]';
     const cart = JSON.parse(cartStorage);
-    const product = {title, price};
+    const product = {title, price, imgPath, productId};
     localStorage.setItem('cart', JSON.stringify([...cart, product]))
-    
   })
 })
