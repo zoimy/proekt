@@ -30,7 +30,6 @@ function renderCart() {
     <div class="product__price">$${price}</div>
   </div>`;
     cartSide.appendChild(newCard);
-    console.log(price);
     sum += +price;
   });
 }
@@ -69,6 +68,7 @@ function renderOrderReview() {
     >Оформить заказ</a
   >`;
 }
+
 
 if (cartStorage.length) {
   renderCart();

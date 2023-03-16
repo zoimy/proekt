@@ -211,7 +211,7 @@
           <div class="subscription__form">
             <form id="subForm">
               <input type="text" placeholder="Введите ваш e-mail" />
-              <button class="btn snackbar-btn-sub">Подписаться</button>
+              <button class="btn snackbar-btn-sub" onclick="openSnackbar('Вы подписались на рассылку')" type="button">Подписаться</button>
             </form>
           </div>
         </div>
@@ -408,10 +408,7 @@
       </div>
     </div>
 
-    <div class="snackbar snackbar-sub">
-      Вы подписались на новостную рассылку
-    </div>
-    <div class="snackbar snackbar-cart">Продукт добавлен в корзину</div>
+    <div class="snackbar" id="snackbar"></div>
     <!-- ПОДКЛЮЧАЕМ К ПАПКЕ JAVASCRIPT -->
     <script src="../js/script.js"></script>
   </body>
