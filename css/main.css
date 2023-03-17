@@ -404,7 +404,23 @@ input:focus {
 /* -------------------------------- /Snackbar -------------------------------- */
 
 /* ------------------------------ Media Queries ----------------------------- */
+/* .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+} */
+
 @media (max-width: 414px) {
+  .header {
+    /* position: sticky;
+    top: 0;
+    z-index: 9999; */
+  }
+
+  .header__container div:nth-child(2) {
+    order: 3;
+  }
+
   .header .menu__link {
     color: #fff;
     font-size: 30px;
@@ -435,7 +451,7 @@ input:focus {
   }
 
   .header__actions {
-    /* display: none; */
+    margin-left: 120px;
   }
 
   .header .menu__list {
@@ -478,6 +494,18 @@ input:focus {
     justify-content: space-evenly !important; 
   }
 }
+
+@media (max-width: 820px) {
+  .footer__container {
+    justify-content: space-between;
+    gap: 0 !important;
+  }
+
+  .footer__links {
+    gap: 70px !important;
+  }
+}
+
 /* ------------------------------ /Media Queries ----------------------------- */
 
 

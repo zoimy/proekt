@@ -1,5 +1,4 @@
 <!-- СОЗДАНИЕ СТРАНИЦЫ С ПРОДУКТАМИ -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -38,7 +37,7 @@
           <nav class="menu__body">
             <ul class="menu__list">
               <li class="menu__item">
-                <a href="#" class="menu__link">Коллекции</a>
+                <a href="collection.html" class="menu__link">Коллекции</a>
               </li>
               <li class="menu__item">
                 <a href="aboutus.html" class="menu__link">О нас</a>
@@ -66,11 +65,11 @@
     <main>
       <section class="product">
         <div class="prodcut__container">
-          <div class="product__path">
+          <!-- <div class="product__path">
             <a href="home.html">Товары</a>/<a href="#">Мебель</a>/<a href="#"
               >Кресла</a
             >/<a href="#">Кресло Барселона</a>
-          </div>
+          </div> -->
           <div class="product__wrapper">
             <div class="product__slider swiper mySwiper2">
               <div class="swiper-wrapper">
@@ -133,13 +132,15 @@
                   <button class="minus">
                     <span class="material-icons-outlined"> remove </span>
                   </button>
-                  <input type="number" value="1" / class="input" min="0">
+                  <input type="number" value="1" / class="input" min="0" id="count">
                   <button class="plus">
                     <span class="material-icons-outlined"> add </span>
                   </button>
                 </div>
-              </div>  
-              <button class="product__cart btn">Добавить в корзину</button>
+              </div>
+              <button class="product__cart btn" id="addToCart">
+                Добавить в корзину
+              </button>
             </div>
           </div>
         </div>
@@ -257,5 +258,28 @@
     <div class="snackbar" id="snackbar"></div>
     <!-- ПОДКЛЮЧАЕМ К ПАПКЕ JAVASCRIPT -->
     <script src="../js/script.js"></script>
+    <script>
+      const btn = document.getElementById("addToCart");
+      
+
+      if (btn) {
+        btn.addEventListener("click", () => {
+          const cartStorage = localStorage.getItem("cart") || "[]";
+          const cart = JSON.parse(cartStorage);
+          const count = document.getElementById('count');
+
+          const product = { 
+            title: 'Стул Vitra XH-8066DBD3',
+            price: 300,
+            imgPath: 'https://hoff.ru/upload/iblock/a78/a78c65c8b012c38168fe5b606b44ac20.jpg', 
+            productId: Math.random(),
+            count: count.value
+          };
+
+          localStorage.setItem("cart", JSON.stringify([...cart, product]));
+          openSnackbar('Товар добавлен в корзину')
+        });
+      }
+    </script>
   </body>
 </html>

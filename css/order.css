@@ -5,36 +5,40 @@
 .order__container {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 }
-.order__form {
-  width: 451px;
+.order__title {
+  text-align: center;
 }
-.order__form form {
+
+form {
+  width: 500px;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.06);
   padding: 20px;
   border-radius: 8px;
+  margin: 0 auto;
 }
-.order__form form .form-block {
+form .form-block {
   margin-bottom: 16px;
 }
-.order__form form .form-block label {
+form .form-block label {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   color: #000000;
 }
-.order__form form .form-block input {
+form .form-block input {
   width: 100%;
   background: #fcfcfc;
   border-radius: 7px;
   border: 1px solid #ebebeb;
   padding: 19px 0 19px 30px;
 }
-.order__form form .form-block input::-webkit-calendar-picker-indicator {
+form .form-block input::-webkit-calendar-picker-indicator {
   opacity: 0;
   visibility: hidden;
 }
-.order__form form a {
+form a {
   background: var(--accent-color);
   border-radius: 6px;
   padding: 17px 32px;
@@ -46,73 +50,18 @@
   color: #ffffff;
   margin-top: 30px;
 }
-.order .cart {
-  width: 756px;
+
+@media (max-width: 414px) {
+  form {
+    width: auto;
+  }
 }
-.order .cart__title {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 21px;
-  color: #000000;
-  margin-bottom: 30px;
-}
-.order .cart__products .product {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-  border-top: 1px solid lightgrey;
-  padding: 25px 0;
-}
-.order .cart__products .product__image {
-  width: 100px;
-  height: 100px;
-  border: 1px solid lightgrey;
-  border-radius: 6px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.order .cart__products .product__name {
-  font-size: 20px;
-  line-height: 24px;
-  color: #000000;
-}
-.order .cart__products .product__count {
-  display: flex;
-  align-items: center;
-  border: 1px solid #ebebeb;
-  border-radius: 6px;
-  background-color: #fcfcfc;
-  padding: 8px;
-}
-.order .cart__products .product__count input {
-  width: 32px;
-  height: 32px;
-  text-align: center;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 28px;
-  color: #000000;
-  margin: 0 20px;
-  background-color: transparent;
-  border: none;
-}
-.order .cart__products .product__count input:focus {
-  outline: none;
-}
-.order .cart__products .product__count button {
-  cursor: pointer;
-}
-.order .cart__products .product__count button span {
-  font-size: 20px;
-}
-.order .cart__products .product__price {
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 24px;
-  color: #000000;
-}
-.order .cart__products .product:last-child {
-  border-bottom: 1px solid lightgray;
+
+@media (max-width: 820px) {
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%; 
+  }
 }

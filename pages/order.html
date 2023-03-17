@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=, initial-scale=1.0" />
     <title>Document</title>
-		<!-- ПОДКЛЮЧАЕМ СТИЛИ -->
+    <!-- ПОДКЛЮЧАЕМ СТИЛИ -->
     <link rel="stylesheet" href="../css/order.css" />
     <link rel="stylesheet" href="../css/main.css" />
     <link
@@ -64,96 +64,55 @@
       </div>
     </header>
 
-
     <main>
       <section class="order">
         <div class="order__container">
-          <div class="order__cart cart">
-            <div class="cart__title">Оформление заказа</div>
-            <div class="cart__products">
-              <div class="product">
-                <button class="product__button">
-                  <span class="material-icons-outlined"> close </span>
-                </button>
-                <div class="product__image">
-                  <img src="../img/cart/1.png" alt="1" />
-                </div>
-                <div class="product__name">Кресло Барселона</div>
-                <div class="product__count">
-                  <button class="minus">
-                    <span class="material-icons-outlined"> remove </span>
-                  </button>
-                  <input type="number" value="1" / class="input" min="0">
-                  <button class="plus">
-                    <span class="material-icons-outlined"> add </span>
-                  </button>
-                </div>
-                <div class="product__price">$6738</div>
-              </div>
-              <div class="product">
-                <button class="product__button">
-                  <span class="material-icons-outlined"> close </span>
-                </button>
-                <div class="product__image">
-                  <img src="../img/cart/1.png" alt="1" />
-                </div>
-                <div class="product__name">Кресло Барселона</div>
-                <div class="product__count">
-                  <button class="minus">
-                    <span class="material-icons-outlined"> remove </span>
-                  </button>
-                  <input type="number" value="1" / class="input" min="0">
-                  <button class="plus">
-                    <span class="material-icons-outlined"> add </span>
-                  </button>
-                </div>
-                <div class="product__price">$6738</div>
-              </div>
+          <div class="order__title title">Оформление заказа</div>
+          <form>
+            <div class="form-block">
+              <label for="country">Район доставки</label>
+              <input list="country-list" id="country"/ placeholder="Выбрать">
+
+              <datalist id="country-list">
+                <option value="Район 1"></option>
+                <option value="Район 2"></option>
+                <option value="Район 3"></option>
+                <option value="Район 4"></option>
+                <option value="Район 5"></option>
+              </datalist>
             </div>
-          </div>
-          <div class="order__form">
-            <form>
-              <div class="form-block">
-                <label for="country">Район доставки</label>
-                <input list="country-list" id="country"/ placeholder="Выбрать">
 
-                <datalist id="country-list">
-                  <option value="Район 1"></option>
-                  <option value="Район 2"></option>
-                  <option value="Район 3"></option>
-                  <option value="Район 4"></option>
-                  <option value="Район 5"></option>
-                </datalist>
-              </div>
+            <div class="form-block">
+              <label for="fname">ФИО</label>
+              <input
+                type="text"
+                id="fname"
+                placeholder="Введите Ваше полное имя"
+              />
+            </div>
+            <div class="form-block">
+              <label for="tel">Телефон</label>
+              <input type="number" id="tel" placeholder="+123" />
+            </div>
+            <div class="form-block">
+              <label for="address">Адрес доставки</label>
+              <input
+                type="text"
+                id="address"
+                placeholder="Введите адрес доставки"
+              />
+            </div>
+            <div class="form-block">
+              <label for="pay">Способ оплаты</label>
+              <input list="pay-list" id="pay" placeholder="Выбрать" />
 
-              <div class="form-block">
-                <label for="fname">ФИО</label>
-                <input
-                  type="text"
-                  id="fname"
-                  placeholder="Введите Ваше полное имя"
-                />
-              </div>
-              <div class="form-block">
-                <label for="tel">Телефон</label>
-                <input type="number" id="tel" placeholder="+123" />
-              </div>
-              <div class="form-block">
-                <label for="address">Адрес доставки</label>
-                <input type="text" id="address" placeholder="Введите адрес доставки" />
-              </div>
-              <div class="form-block">
-                <label for="pay">Способ оплаты</label>
-                <input list="pay-list" id="pay" placeholder="Выбрать" />
-
-                <datalist id="pay-list">
-                  <option value="Наличными"></option>
-                  <option value="Картой"></option>
-                </datalist>
-              </div>
-              <a href="home.html" class="btn">Оформить заказ</a>
-            </form>
-          </div>
+              <datalist id="pay-list">
+                <option value="Наличными"></option>
+                <option value="Картой"></option>
+              </datalist>
+            </div>
+            <a href="home.html" class="btn">Оформить заказ</a>
+          </form>
         </div>
       </section>
     </main>
@@ -171,13 +130,17 @@
                 <a href="contact.html" class="block__link">Контакты</a>
               </li>
               <li class="block__item">
-                <a href="delivery.html" class="block__link">Адресса магазинов</a>
+                <a href="delivery.html" class="block__link"
+                  >Адресса магазинов</a
+                >
               </li>
               <li class="block__item">
                 <a href="contact.html" class="block__link">Напишите нам</a>
               </li>
               <li class="block__item">
-                <a href="contact.html" class="block__link">Сотруднечество с нами</a>
+                <a href="contact.html" class="block__link"
+                  >Сотруднечество с нами</a
+                >
               </li>
             </ul>
           </div>
@@ -185,7 +148,9 @@
             <div class="block__title">Наши услуги</div>
             <ul class="block__list">
               <li class="block__item">
-                <a href="delivery.html" class="block__link">Доставка и самовывоз</a>
+                <a href="delivery.html" class="block__link"
+                  >Доставка и самовывоз</a
+                >
               </li>
               <li class="block__item">
                 <a href="cart.html" class="block__link">Оплата и кредит</a>
@@ -199,16 +164,28 @@
         <div class="footer__social">
           <div class="social__title">Мы в социальных сетях</div>
           <div class="social__links">
-            <a target="_blank" href="https://www.facebook.com/pushkinsenate" class="social__link">
+            <a
+              target="_blank"
+              href="https://www.facebook.com/pushkinsenate"
+              class="social__link"
+            >
               <img src="../img/home/social/facebook.svg" alt="facebook-icon" />
             </a>
-            <a target="_blank" href="https://www.instagram.com/pushkin.high.school.senate/" class="social__link">
+            <a
+              target="_blank"
+              href="https://www.instagram.com/pushkin.high.school.senate/"
+              class="social__link"
+            >
               <img
                 src="../img/home/social/instagram.svg"
                 alt="instagram-icon"
               />
             </a>
-            <a target="_blank" href="https://www.youtube.com/@pushkinschoolsenate7647" class="social__link">
+            <a
+              target="_blank"
+              href="https://www.youtube.com/@pushkinschoolsenate7647"
+              class="social__link"
+            >
               <img src="../img/home/social/youtube.svg" alt="youtube-icon" />
             </a>
           </div>
@@ -250,7 +227,7 @@
       </div>
     </div>
     <div class="snackbar" id="snackbar"></div>
-		<!-- ПОДКЛЮЧАЕМ К ПАПКЕ JAVASCRIPT -->
+    <!-- ПОДКЛЮЧАЕМ К ПАПКЕ JAVASCRIPT -->
     <script src="../js/script.js"></script>
   </body>
 </html>

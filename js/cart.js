@@ -7,8 +7,10 @@ let sumPromo = 0;
 
 function renderCart() {
   cartSide.innerHTML = ``;
+  sum = 0;
   cartStorage.forEach((el) => {
-    const { title, price, imgPath, productId } = el;
+    let { title, price, imgPath, productId, count } = el;
+    price *= count;
     const newCard = document.createElement("div");
     newCard.innerHTML = `<div class="product" id="${productId}">
     <button class="product__button someclass" id="btn">
@@ -19,18 +21,18 @@ function renderCart() {
     </div>
     <div class="product__name">${title}</div>
     <div class="product__count">
-      <button class="minus">
+      <button class="minus" id="minus">
         <span class="material-icons-outlined"> remove </span>
       </button>
-      <input type="number" value="1" / class="input" min="0">
-      <button class="plus">
+      <input type="number" value="${count}" / class="input" min="0">
+      <button class="plus" id="plus">
         <span class="material-icons-outlined"> add </span>
       </button>
     </div>
     <div class="product__price">$${price}</div>
   </div>`;
     cartSide.appendChild(newCard);
-    sum += +price;
+    cartStorage.forEach((i) => (sum += i.price * i.count));
   });
 }
 
@@ -46,7 +48,7 @@ function showEmptyCart() {
 
 function renderOrderReview() {
   orderSide.innerHTML = ``;
-  if(!cartStorage.length > 0) {
+  if (!cartStorage.length > 0) {
     sumPromo = 0;
   } else {
     sumPromo = sum - 100;
@@ -68,7 +70,6 @@ function renderOrderReview() {
     >Оформить заказ</a
   >`;
 }
-
 
 if (cartStorage.length) {
   renderCart();
@@ -104,6 +105,24 @@ if (cartStorage.length) {
       localStorage.clear();
       showEmptyCart();
     }
+  });
+
+  const minusBtn = document.querySelectorAll(".minus");
+  if (minusBtn) {
+    minusBtn.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        let prid = btn.parentElement.parentElement.id;
+        console.log('minus')
+      });
+    });
+  }
+
+  const plusBtn = document.querySelectorAll(".plus");
+  plusBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      let prid = btn.parentElement.parentElement.id;
+      console.log('plus')
+    });
   });
 } else {
   showEmptyCart();

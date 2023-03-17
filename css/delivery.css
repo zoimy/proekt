@@ -89,3 +89,29 @@
   color: #ffffff;
   padding: 10px 32px;
 }
+
+
+/* ------------------------------ Media Queries ----------------------------- */
+@media (max-width: 414px) {
+  .delivery__wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .delivery__banner {
+    width: auto;
+    background-position: center right;
+    /* height: 256px; */
+    background-size: 80%;
+  }
+
+  .delivery__banner h2 {
+    width: auto;
+    font-size: 26px;
+    margin-bottom: 19px;
+  }
+  .delivery__contact {
+    align-items: flex-start;
+  }
+}
+/* ------------------------------ /Media Queries ----------------------------- */

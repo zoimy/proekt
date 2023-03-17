@@ -2,8 +2,6 @@ const toTopBtn = document.getElementById("to-top");
 const slides = document.querySelectorAll(".slide");
 const colors = document.querySelectorAll(".color");
 const inputEl = document.querySelector(".input");
-const minusBtn = document.querySelector(".minus");
-const plusBtn = document.querySelector(".plus");
 const closePopupUserBtn = document.getElementById("popup-close");
 const openPopupUserBtn = document.querySelector(".header__user");
 const registerPopupBtn = document.querySelector(".popup__button");
@@ -138,20 +136,6 @@ colors.forEach((color) => {
   });
 });
 
-// ЦЕНА ТОВАРА
-if (minusBtn) {
-  minusBtn.addEventListener("click", () => {
-    if (inputEl.getAttribute("value") > 0) {
-      inputEl.stepDown();
-    }
-  });
-}
-
-if (plusBtn) {
-  plusBtn.addEventListener("click", (e) => {
-    inputEl.stepUp();
-  });
-}
 
 // ОТКРЫТИЕ ВКЛАДКИ РЕГИСТРАЦИИ
 if (openPopupUserBtn && popupUser) {
@@ -199,16 +183,14 @@ if (products) {
   products.forEach((el) => {
     const imgPath = el.childNodes[1].children[0].src;
     const title = el.childNodes[3].innerText;
-    const price = el.childNodes[5].childNodes[1].innerText;
-
+    const price =  +el.childNodes[5].childNodes[1].innerText;
     const productId = Math.random();
-
     const btn = el.childNodes[7];
 
     btn.addEventListener("click", () => {
       const cartStorage = localStorage.getItem("cart") || "[]";
       const cart = JSON.parse(cartStorage);
-      const product = { title, price, imgPath, productId };
+      const product = { title, price, imgPath, productId, count: 1};
       localStorage.setItem("cart", JSON.stringify([...cart, product]));
     });
   });
