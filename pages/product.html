@@ -132,7 +132,8 @@
                   <button class="minus">
                     <span class="material-icons-outlined"> remove </span>
                   </button>
-                  <input type="number" value="1" / class="input" min="0" id="count">
+                  <input type="number" value="1" / class="input" min="0"
+                  id="count">
                   <button class="plus">
                     <span class="material-icons-outlined"> add </span>
                   </button>
@@ -260,24 +261,41 @@
     <script src="../js/script.js"></script>
     <script>
       const btn = document.getElementById("addToCart");
-      
+      const btnPlus = document.querySelector(".plus");
+      const btnMinus = document.querySelector(".minus");
+      const count = document.getElementById("count");
+
+      if (btnPlus) {
+        btnPlus.addEventListener("click", () => {
+          count.stepUp();
+        });
+      }
+
+      if (btnMinus) {
+        btnMinus.addEventListener("click", () => {
+          if (count.value > 0) {
+            count.stepDown();
+          }
+        });
+      }
 
       if (btn) {
         btn.addEventListener("click", () => {
           const cartStorage = localStorage.getItem("cart") || "[]";
           const cart = JSON.parse(cartStorage);
-          const count = document.getElementById('count');
+          const count = document.getElementById("count");
 
-          const product = { 
-            title: 'Стул Vitra XH-8066DBD3',
+          const product = {
+            title: "Стул Vitra XH-8066DBD3",
             price: 300,
-            imgPath: 'https://hoff.ru/upload/iblock/a78/a78c65c8b012c38168fe5b606b44ac20.jpg', 
+            imgPath:
+              "https://hoff.ru/upload/iblock/a78/a78c65c8b012c38168fe5b606b44ac20.jpg",
             productId: Math.random(),
-            count: count.value
+            count: count.value,
           };
 
           localStorage.setItem("cart", JSON.stringify([...cart, product]));
-          openSnackbar('Товар добавлен в корзину')
+          openSnackbar("Товар добавлен в корзину");
         });
       }
     </script>

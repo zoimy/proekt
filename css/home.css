@@ -11,6 +11,7 @@
 }
 .banner__image img {
   mix-blend-mode: darken;
+  height: 100%;
 }
 .banner__info {
   max-width: 323px;

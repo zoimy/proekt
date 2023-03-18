@@ -2,12 +2,10 @@ let cartSide = document.querySelector(".cart__products");
 let cartStorage = JSON.parse(localStorage.getItem("cart") || "[]");
 
 let orderSide = document.querySelector(".review");
-let sum = 0;
-let sumPromo = 0;
 
 function renderCart() {
   cartSide.innerHTML = ``;
-  sum = 0;
+  let sum = 0;
   cartStorage.forEach((el) => {
     let { title, price, imgPath, productId, count } = el;
     price *= count;
@@ -47,10 +45,14 @@ function showEmptyCart() {
 }
 
 function renderOrderReview() {
+  let sum = 0;
+  let sumPromo = 0;
   orderSide.innerHTML = ``;
   if (!cartStorage.length > 0) {
     sumPromo = 0;
+    sum = 0;
   } else {
+    cartStorage.forEach((i) => (sum += i.price * i.count));
     sumPromo = sum - 100;
   }
   orderSide.innerHTML = `<div class="review__title">Обзор заказа</div>
@@ -110,18 +112,48 @@ if (cartStorage.length) {
   const minusBtn = document.querySelectorAll(".minus");
   if (minusBtn) {
     minusBtn.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        let prid = btn.parentElement.parentElement.id;
-        console.log('minus')
+      btn.addEventListener("click", (e) => {
+        let input = btn.parentElement.childNodes[3];
+        let product = btn.parentElement.parentElement;
+
+        input.stepDown();
+
+        let x = cartStorage.filter((item) => item.productId == +product.id);
+        x[0].count = input.value;
+        console.log(...x);
+
+        cartStorage.forEach((item) => {
+          if (item.productId == product.id) {
+            item.count = x[0].count;
+          }
+        });
+
+        localStorage.setItem("cart", JSON.stringify(cartStorage));
+        renderOrderReview();
       });
     });
   }
 
   const plusBtn = document.querySelectorAll(".plus");
   plusBtn.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      let prid = btn.parentElement.parentElement.id;
-      console.log('plus')
+    btn.addEventListener("click", (e) => {
+      let input = btn.parentElement.childNodes[3];
+      let product = btn.parentElement.parentElement;
+
+      input.stepUp();
+
+      let x = cartStorage.filter((item) => item.productId == +product.id);
+      x[0].count = input.value;
+      console.log(...x);
+
+      cartStorage.forEach((item) => {
+        if (item.productId == product.id) {
+          item.count = x[0].count;
+        }
+      });
+
+      localStorage.setItem("cart", JSON.stringify(cartStorage));
+      renderOrderReview();
     });
   });
 } else {
